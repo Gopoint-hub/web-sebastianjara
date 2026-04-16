@@ -608,10 +608,10 @@ function Home2() {
                 /* @__PURE__ */ jsx9("span", { className: "h-px w-6 bg-primary" }),
                 "CMO Fraccionado"
               ] }),
-              /* @__PURE__ */ jsxs6("h1", { className: "font-display font-semibold leading-[0.9] tracking-tight text-[clamp(3rem,11vw,7.5rem)] mb-6", children: [
+              /* @__PURE__ */ jsxs6("h1", { className: "font-logo uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6", children: [
                 "Sebasti\xE1n",
                 /* @__PURE__ */ jsx9("br", {}),
-                /* @__PURE__ */ jsx9("span", { className: "italic font-normal text-primary", children: "Jara" })
+                /* @__PURE__ */ jsx9("span", { className: "text-primary", children: "Jara" })
               ] }),
               /* @__PURE__ */ jsxs6("p", { className: "text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8", children: [
                 "Direcci\xF3n de marketing senior para tu empresa",
@@ -688,7 +688,7 @@ function Home2() {
           /* @__PURE__ */ jsxs6("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8", children: [
             "Me sumo a tu empresa como",
             " ",
-            /* @__PURE__ */ jsx9("span", { className: "italic text-primary", children: "CMO" }),
+            /* @__PURE__ */ jsx9("span", { className: "text-primary", children: "CMO" }),
             ", sin el costo de uno interno."
           ] }),
           /* @__PURE__ */ jsxs6("div", { className: "grid md:grid-cols-2 gap-8 mt-12", children: [

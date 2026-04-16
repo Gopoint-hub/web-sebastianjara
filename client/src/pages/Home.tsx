@@ -64,10 +64,10 @@ export default function Home() {
                 CMO Fraccionado
               </p>
 
-              <h1 className="font-display font-semibold leading-[0.9] tracking-tight text-[clamp(3rem,11vw,7.5rem)] mb-6">
+              <h1 className="font-logo uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6">
                 Sebastián
                 <br />
-                <span className="italic font-normal text-primary">Jara</span>
+                <span className="text-primary">Jara</span>
               </h1>
 
               <p className="text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8">
@@ -143,7 +143,7 @@ export default function Home() {
             </p>
             <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8">
               Me sumo a tu empresa como{" "}
-              <span className="italic text-primary">CMO</span>, sin el costo
+              <span className="text-primary">CMO</span>, sin el costo
               de uno interno.
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
