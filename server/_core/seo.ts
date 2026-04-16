@@ -60,34 +60,34 @@ interface RouteMeta {
 
 const routeMeta: Record<string, RouteMeta> = {
   "/": {
-    title: "Sebastián Jara — CMO Fraccionado",
+    title: "Sebastián Jara — CMO Fraccionado con IA aplicada",
     description:
-      "Sebastián Jara: CMO fraccionado para empresas que necesitan dirección de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
+      "Dirección de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`,
   },
   "/mentoria": {
-    title: "Mentoría Ejecutiva 1 a 1 — Detalle del servicio | Sebastián Jara",
+    title: "Cómo trabajo — CMO Fraccionado con IA aplicada | Sebastián Jara",
     description:
-      "Mentoría ejecutiva privada para dueños de empresa. Diseñamos tu sistema comercial, automatización y roadmap para escalar con orden, datos y ejecución.",
+      "Cómo opero como CMO fraccionado: estrategia, gestión e IA aplicada. Me integro a tu empresa como dirección de marketing senior, sin contratar un equipo completo.",
     canonical: `${BASE_URL}/mentoria`,
   },
   "/sobre-mi": {
-    title: "Sobre Sebastián Jara | Mentor Ejecutivo y Fundador de GoPoint",
+    title: "Sobre Sebastián Jara — Consultor de IA & Marketing, CMO Fraccionado",
     description:
-      "Founder & CEO de GoPoint. 15+ años en marketing digital, SEO, Ads y automatización. Mentoría ejecutiva 1 a 1 para dueños de empresa en LATAM y EE.UU.",
+      "Founder & CEO de GoPoint. 15+ años en marketing digital, SEO, Ads, automatización e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU.",
     canonical: `${BASE_URL}/sobre-mi`,
     ogType: "profile",
   },
   "/postular": {
-    title: "Postular a la Mentoría Ejecutiva 1 a 1 | Sebastián Jara",
+    title: "Trabajemos juntos | Sebastián Jara — CMO Fraccionado",
     description:
-      "Postula a la mentoría ejecutiva 1 a 1. Proceso selectivo para dueños de empresa que buscan diseñar su sistema comercial y escalar con orden.",
+      "Cuéntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado con IA aplicada encaja con tu momento y equipo.",
     canonical: `${BASE_URL}/postular`,
   },
   "/faq": {
-    title: "Preguntas frecuentes | Sebastián Jara — Mentoría Ejecutiva",
+    title: "Preguntas frecuentes | Sebastián Jara — CMO Fraccionado con IA",
     description:
-      "Respuestas a las preguntas más comunes sobre la Mentoría Ejecutiva 1 a 1 de Sebastián Jara: qué es, para quién es, cómo postular y qué resultados esperar.",
+      "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qué es, para quién, cómo trabajo y cómo postular.",
     canonical: `${BASE_URL}/faq`,
   },
 };

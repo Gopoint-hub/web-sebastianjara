@@ -664,29 +664,29 @@ function wwwRedirect(req, res, next) {
 }
 var routeMeta = {
   "/": {
-    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado",
-    description: "Sebasti\xE1n Jara: CMO fraccionado para empresas que necesitan direcci\xF3n de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
+    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA aplicada",
+    description: "Direcci\xF3n de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`
   },
   "/mentoria": {
-    title: "Mentor\xEDa Ejecutiva 1 a 1 \u2014 Detalle del servicio | Sebasti\xE1n Jara",
-    description: "Mentor\xEDa ejecutiva privada para due\xF1os de empresa. Dise\xF1amos tu sistema comercial, automatizaci\xF3n y roadmap para escalar con orden, datos y ejecuci\xF3n.",
+    title: "C\xF3mo trabajo \u2014 CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
+    description: "C\xF3mo opero como CMO fraccionado: estrategia, gesti\xF3n e IA aplicada. Me integro a tu empresa como direcci\xF3n de marketing senior, sin contratar un equipo completo.",
     canonical: `${BASE_URL}/mentoria`
   },
   "/sobre-mi": {
-    title: "Sobre Sebasti\xE1n Jara | Mentor Ejecutivo y Fundador de GoPoint",
-    description: "Founder & CEO de GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads y automatizaci\xF3n. Mentor\xEDa ejecutiva 1 a 1 para due\xF1os de empresa en LATAM y EE.UU.",
+    title: "Sobre Sebasti\xE1n Jara \u2014 Consultor de IA & Marketing, CMO Fraccionado",
+    description: "Founder & CEO de GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads, automatizaci\xF3n e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU.",
     canonical: `${BASE_URL}/sobre-mi`,
     ogType: "profile"
   },
   "/postular": {
-    title: "Postular a la Mentor\xEDa Ejecutiva 1 a 1 | Sebasti\xE1n Jara",
-    description: "Postula a la mentor\xEDa ejecutiva 1 a 1. Proceso selectivo para due\xF1os de empresa que buscan dise\xF1ar su sistema comercial y escalar con orden.",
+    title: "Trabajemos juntos | Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+    description: "Cu\xE9ntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado con IA aplicada encaja con tu momento y equipo.",
     canonical: `${BASE_URL}/postular`
   },
   "/faq": {
-    title: "Preguntas frecuentes | Sebasti\xE1n Jara \u2014 Mentor\xEDa Ejecutiva",
-    description: "Respuestas a las preguntas m\xE1s comunes sobre la Mentor\xEDa Ejecutiva 1 a 1 de Sebasti\xE1n Jara: qu\xE9 es, para qui\xE9n es, c\xF3mo postular y qu\xE9 resultados esperar.",
+    title: "Preguntas frecuentes | Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA",
+    description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo postular.",
     canonical: `${BASE_URL}/faq`
   }
 };

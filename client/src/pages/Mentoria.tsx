@@ -6,204 +6,334 @@ import { ArrowRight, Check } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const stagger = {
-  animate: { transition: { staggerChildren: 0.08 } }
+  animate: { transition: { staggerChildren: 0.08 } },
 };
 
 const itemFade = {
   initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export default function Mentoria() {
   return (
     <Layout>
       <SEO
-        title="Mentoría Ejecutiva 1 a 1 — Detalle del servicio | Sebastián Jara"
-        description="Mentoría ejecutiva privada para dueños de empresa. Diseñamos tu sistema comercial, automatización y roadmap para escalar con orden, datos y ejecución."
-        keywords={["mentoría ejecutiva", "consultoría 1 a 1", "sistema comercial", "automatización con IA", "mentoría empresarial", "escalar negocio"]}
+        title="Cómo trabajo — CMO Fraccionado con IA aplicada | Sebastián Jara"
+        description="Cómo opero como CMO fraccionado: dirección de marketing senior con IA aplicada, integrado a tu equipo. Estrategia, gestión y ejecución desde adentro de tu empresa."
+        keywords={[
+          "cómo trabaja CMO fraccionado",
+          "consultor de IA y marketing",
+          "dirección de marketing",
+          "marketing con IA",
+          "fractional CMO",
+          "Sebastián Jara",
+        ]}
       />
+
       {/* Hero */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-3xl"
           >
-            <h1 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">
-              Mentoría Ejecutiva 1 a 1
+            <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5">
+              Cómo trabajo
+            </p>
+            <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+              Me integro a tu empresa como{" "}
+              <span className="text-primary">CMO fraccionado</span> con IA
+              aplicada.
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Sesión privada estratégica donde diseñamos el sistema comercial y operativo que tu empresa necesita. No es teoría: es trabajo aplicado, con foco en decisiones y plan de acción.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3">
+              No entrego un informe y me voy. Me sumo al equipo, defino
+              rumbo, priorizo y hago que las cosas salgan — con la IA como
+              palanca de ejecución donde aporta valor real.
             </p>
-            <p className="text-sm text-primary font-medium">
-              Cupos limitados por agenda.
+            <p className="text-sm text-muted-foreground">
+              Trabajo con pocos clientes a la vez.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Qué incluye */}
-      <section className="py-16 border-t border-border/30">
-        <div className="container">
+      {/* 3 DIMENSIONES */}
+      <section className="py-14 md:py-20 border-t border-border/30">
+        <div className="container max-w-5xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl font-semibold mb-10">Qué trabajamos en la sesión</h2>
-            <div className="space-y-8">
-              {[
-                { title: "Arquitectura del sistema comercial", desc: "Diseño del flujo completo: captación → lead → cierre. Estructura que funcione sin depender de la improvisación." },
-                { title: "Gestión de leads y seguimiento", desc: "Cómo captar, clasificar y hacer seguimiento de cada oportunidad de forma sistemática." },
-                { title: "Cotización rápida con IA", desc: "Cuando aplique, diseñamos un sistema de cotización asistido por IA para responder más rápido." },
-                { title: "Dashboard de control", desc: "Ventas, leads, actividad y resultados en un solo lugar. Decisiones basadas en datos, no en intuición." },
-                { title: "Newsletter y retención con IA", desc: "Sistema de comunicación con tu base que funcione de forma semi-automática." },
-                { title: "Integración de herramientas", desc: "CRM, email, gestión de tareas, documentación. Todo conectado y trabajando como un sistema." },
-                { title: "Roadmap de implementación", desc: "Prioridades claras, orden de ejecución y próximos pasos concretos." }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="border-l-2 border-primary/30 pl-6"
-                >
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Las tres dimensiones
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-12">
+              Estrategia, gestión y ejecución. Sin separarlas.
+            </h2>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Entregables */}
-      <section className="py-16 border-t border-border/30">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
-          >
-            <h2 className="text-2xl font-semibold mb-10">Te vas con</h2>
-            <motion.div
-              variants={stagger}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              {[
-                "Diagnóstico claro de tu situación actual.",
-                "Cuellos de botella identificados.",
-                "Diseño del sistema a implementar.",
-                "Prioridades definidas por impacto.",
-                "Próximos pasos accionables con timeline."
-              ].map((text, i) => (
-                <motion.div key={i} variants={itemFade} className="flex items-start gap-4">
-                  <div className="mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Check className="h-3 w-3 text-primary" />
-                  </div>
-                  <p className="text-foreground">{text}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Para quién */}
-      <section className="py-16 border-t border-border/30">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
-          >
-            <h2 className="text-2xl font-semibold mb-10">Para quién es</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Dueños de empresa que ya venden.",
-                "Socios o directores que lideran el área comercial.",
-                "Negocios con herramientas desconectadas.",
-                "Empresas que quieren escalar con orden.",
-                "Quienes necesitan un plan claro y accionable.",
-                "Quienes buscan sistemas, no dependencia."
-              ].map((text, i) => (
-                <div key={i} className="flex items-start gap-3 glass-panel rounded-lg p-4">
-                  <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <p className="text-sm text-foreground/90">{text}</p>
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {[
+              {
+                n: "01",
+                title: "Estrategia",
+                body:
+                  "Diagnóstico del estado actual, mercado y competencia. Posicionamiento, propuesta de valor y plan comercial. Qué hacer, qué dejar de hacer, en qué orden — y dónde la IA entrega ventaja.",
+              },
+              {
+                n: "02",
+                title: "Gestión",
+                body:
+                  "Dirección de equipos internos y proveedores. Rituales de ejecución, KPIs, pipeline comercial y dashboard. Me integro como si fuera tu CMO interno.",
+              },
+              {
+                n: "03",
+                title: "IA aplicada",
+                body:
+                  "Contenido, automatización de procesos, agentes y análisis con IA. Aplicada donde mueve la aguja real — velocidad y escala sin perder criterio estratégico.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.n}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="font-display text-5xl md:text-6xl text-primary/30 mb-4">
+                  {item.n}
                 </div>
-              ))}
-            </div>
+                <h3 className="font-display text-2xl md:text-3xl mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QUÉ OPERO */}
+      <section className="py-14 md:py-20 border-t border-border/30">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Qué opero
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-10">
+              Las áreas que tomo bajo dirección.
+            </h2>
+          </motion.div>
+
+          <div className="space-y-8">
+            {[
+              {
+                title: "Sistema comercial end-to-end",
+                desc:
+                  "Diseño y gestión del flujo captación → lead → cierre. Estructura que funcione sin depender de la improvisación.",
+              },
+              {
+                title: "Adquisición: SEO, Ads y contenido",
+                desc:
+                  "Dirección de canales pagos y orgánicos. Asignación de presupuesto, coordinación de proveedores y calibración con IA cuando acelera ejecución.",
+              },
+              {
+                title: "Pipeline y gestión de leads",
+                desc:
+                  "CRM, seguimiento, clasificación y cierre. Reglas claras para que ninguna oportunidad se caiga por el camino.",
+              },
+              {
+                title: "Automatización y agentes con IA",
+                desc:
+                  "Respuestas rápidas, cotizaciones asistidas, workflows de operación, agentes de atención o investigación. IA como infraestructura, no como gimmick.",
+              },
+              {
+                title: "Dashboard y métricas",
+                desc:
+                  "Ventas, leads, actividad y resultados en un solo lugar. Decisiones basadas en datos, no en intuición.",
+              },
+              {
+                title: "Retención y ciclo de vida",
+                desc:
+                  "Newsletter, comunicación recurrente, reactivación y referidos. Monetizar la base que ya tienes.",
+              },
+              {
+                title: "Stack de herramientas",
+                desc:
+                  "CRM, email, automatización, gestión, documentación. Todo conectado y funcionando como un sistema.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="border-l-2 border-primary/30 pl-6"
+              >
+                <h3 className="font-semibold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QUÉ OBTIENES */}
+      <section className="py-14 md:py-20 border-t border-border/30">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Qué obtienes
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-10">
+              El resultado de tenerme dentro.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-80px" }}
+            className="space-y-4"
+          >
+            {[
+              "Una cabeza senior tomando decisiones de marketing todos los días.",
+              "Un plan comercial priorizado, con foco y criterio ejecutivo.",
+              "Equipo interno y proveedores coordinados contra los mismos KPIs.",
+              "IA y automatización aplicadas donde dan ventaja real.",
+              "Dashboard con ventas, leads y actividad — decisiones con datos.",
+              "Un sistema que no colapsa si faltas una semana.",
+            ].map((text, i) => (
+              <motion.div
+                key={i}
+                variants={itemFade}
+                className="flex items-start gap-4 py-2"
+              >
+                <div className="mt-1.5 flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-primary" />
+                </div>
+                <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+                  {text}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Proceso */}
-      <section className="py-16 border-t border-border/30">
-        <div className="container">
+      {/* PROCESO */}
+      <section className="py-14 md:py-20 border-t border-border/30">
+        <div className="container max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl font-semibold mb-10">Cómo funciona</h2>
-            <div className="space-y-8">
-              {[
-                { step: "01", title: "Postula", desc: "Completas un formulario breve con la información de tu empresa y tu desafío actual." },
-                { step: "02", title: "Revisión", desc: "Reviso tu caso personalmente y confirmo si la mentoría encaja con tu situación." },
-                { step: "03", title: "Sesión", desc: "Agendamos la sesión y trabajamos con foco total en decisiones, diseño del sistema y plan de acción." }
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-6">
-                  <span className="text-3xl font-bold text-primary/30 font-mono flex-shrink-0">
-                    {item.step}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Cómo entramos
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-12">
+              Del primer contacto al primer mes operando.
+            </h2>
           </motion.div>
+
+          <div className="space-y-10">
+            {[
+              {
+                step: "01",
+                title: "Postulación y fit",
+                desc:
+                  "Completas un formulario con tu empresa, momento y desafío. Reviso cada caso personalmente y te respondo si encaja para trabajar juntos.",
+              },
+              {
+                step: "02",
+                title: "Alineación",
+                desc:
+                  "Hablamos por video. Defino alcance, tiempo mínimo, expectativas, equipos con los que interactuaré y cómo se verá mi integración.",
+              },
+              {
+                step: "03",
+                title: "Diagnóstico y plan (semana 1-2)",
+                desc:
+                  "Audito el estado actual — canales, herramientas, equipo, datos — y entrego un plan de 90 días priorizado por impacto.",
+              },
+              {
+                step: "04",
+                title: "Ejecución y dirección (mes 1 en adelante)",
+                desc:
+                  "Entro en la operación diaria: coordino, decido, aplico IA donde corresponde, mido y ajusto. Rituales semanales de seguimiento.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="flex items-start gap-6">
+                <span className="font-display text-3xl md:text-4xl text-primary/40 flex-shrink-0 leading-none">
+                  {item.step}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 border-t border-border/30">
-        <div className="container">
+      <section className="py-16 md:py-24 border-t border-border/30 relative overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, oklch(0.65 0.22 40 / 0.12), transparent 60%)",
+          }}
+        />
+        <div className="container max-w-2xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-2xl mx-auto text-center"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <h2 className="text-2xl font-semibold mb-8">
-              Si quieres orden y escalabilidad, postula.
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+              ¿Encaja con tu momento?
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/postular">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full"
-                >
-                  Postular a la mentoría <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed">
+              Cuéntame sobre tu empresa. Si la dirección de marketing con
+              IA encaja, te propongo cómo entrar.
+            </p>
+            <Link href="/postular" className="inline-block w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"
+              >
+                Trabajemos juntos <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

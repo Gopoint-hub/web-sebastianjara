@@ -9,33 +9,40 @@ export default function About() {
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   };
 
   return (
     <Layout>
       <SEO
-        title="Sobre Sebastián Jara | Mentor Ejecutivo y Fundador de GoPoint"
-        description="Founder & CEO de GoPoint. 15+ años en marketing digital, SEO, Ads y automatización. Mentoría ejecutiva 1 a 1 para dueños de empresa en LATAM y EE.UU."
-        keywords={["Sebastián Jara", "mentor ejecutivo", "GoPoint Agency", "consultor marketing digital", "mentoría empresarial", "automatización con IA"]}
+        title="Sobre Sebastián Jara — Consultor de IA & Marketing, CMO Fraccionado"
+        description="Founder & CEO de GoPoint. 15+ años en marketing digital, SEO, Ads, automatización e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU."
+        keywords={[
+          "Sebastián Jara",
+          "consultor de IA y marketing",
+          "CMO fraccionado",
+          "GoPoint Agency",
+          "marketing con IA",
+          "automatización IA",
+        ]}
         type="profile"
       />
 
       {/* Hero with Photo */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Photo */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="order-1 md:order-2"
             >
               <div className="relative max-w-md mx-auto md:mx-0 md:ml-auto">
                 <img
                   src="/images/sebastian-jara.webp"
-                  alt="Sebastián Jara — Mentor Ejecutivo"
+                  alt="Sebastián Jara — CMO Fraccionado y consultor de IA & Marketing"
                   className="w-full rounded-2xl"
                   width="1068"
                   height="1346"
@@ -51,18 +58,29 @@ export default function About() {
               variants={fadeIn}
               className="order-2 md:order-1"
             >
-              <h1 className="text-3xl md:text-5xl font-display font-bold mb-8 leading-tight">
+              <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5">
+                Consultor de IA &amp; Marketing
+              </p>
+              <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8">
                 Sebastián Jara
               </h1>
-              <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Founder & CEO @GoPoint. 15+ años en marketing digital, SEO, Ads y automatización. Trabajo con empresas en LATAM y EE.UU.
+                  Founder &amp; CEO de GoPoint. 15+ años liderando marketing
+                  digital para empresas en LATAM y Estados Unidos — SEO,
+                  Ads, sistemas comerciales, automatización y agentes con
+                  IA.
                 </p>
                 <p>
-                  Mi enfoque es construir sistemas: atraer demanda, convertirla en ventas y ordenar la operación. Uso automatización e IA como aceleradores, no como oferta principal.
+                  Hoy opero como{" "}
+                  <span className="text-foreground">CMO fraccionado</span>:
+                  me integro a empresas que necesitan dirección de marketing
+                  senior con IA aplicada, sin el costo de contratar un
+                  equipo completo.
                 </p>
                 <p>
-                  Hoy trabajo con pocos clientes de forma directa a través de la mentoría ejecutiva 1 a 1. Prefiero profundidad sobre volumen.
+                  Trabajo con pocos clientes a la vez. Prefiero profundidad
+                  sobre volumen.
                 </p>
               </div>
             </motion.div>
@@ -70,29 +88,41 @@ export default function About() {
         </div>
       </section>
 
-      {/* Experiencia */}
-      <section className="py-16 border-t border-border/30">
+      {/* Proyectos */}
+      <section className="py-14 md:py-20 border-t border-border/30">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h2 className="text-2xl font-semibold mb-10">Proyectos</h2>
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Trayectoria
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-10">
+              Proyectos que lidero.
+            </h2>
             <div className="space-y-6">
               <div className="border-l-2 border-primary/40 pl-6">
                 <h3 className="font-semibold">GoPoint Agency</h3>
-                <p className="text-sm text-muted-foreground">Founder & CEO — Agencia de marketing digital y automatización.</p>
+                <p className="text-sm text-muted-foreground">
+                  Founder &amp; CEO — Agencia de marketing digital,
+                  automatización e IA aplicada.
+                </p>
               </div>
               <div className="border-l-2 border-border/50 pl-6">
                 <h3 className="font-semibold">FrutillarHoy</h3>
-                <p className="text-sm text-muted-foreground">Director — Portal de contenido local.</p>
+                <p className="text-sm text-muted-foreground">
+                  Director — Portal de contenido local.
+                </p>
               </div>
               <div className="border-l-2 border-border/50 pl-6">
                 <h3 className="font-semibold">MarketingHoy.com</h3>
-                <p className="text-sm text-muted-foreground">Director — Medio de marketing digital en español.</p>
+                <p className="text-sm text-muted-foreground">
+                  Director — Medio de marketing digital en español.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -100,24 +130,31 @@ export default function About() {
       </section>
 
       {/* Enfoque */}
-      <section className="py-16 border-t border-border/30">
+      <section className="py-14 md:py-20 border-t border-border/30">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h2 className="text-2xl font-semibold mb-10">Áreas de expertise</h2>
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Expertise
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-10">
+              Áreas donde opero.
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Sistema comercial y captación de leads",
-                "SEO, Ads y estrategia de tráfico",
+                "Estrategia de marketing y posicionamiento",
+                "SEO, Ads y adquisición de tráfico",
                 "Automatización de procesos con IA",
-                "CRM y gestión de pipeline",
-                "Dashboard de control y métricas",
-                "Newsletter y retención con IA"
+                "Agentes y asistentes con LLMs",
+                "CRM, pipeline y gestión comercial",
+                "Dashboard, métricas y análisis con IA",
+                "Contenido y newsletter con IA",
+                "Integración y arquitectura de stack",
               ].map((area, i) => (
                 <div key={i} className="glass-panel rounded-lg p-4">
                   <p className="text-sm text-foreground/90">{area}</p>
@@ -129,28 +166,26 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 border-t border-border/30">
+      <section className="py-16 md:py-24 border-t border-border/30">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-2xl font-semibold mb-8">
-              Si quieres trabajar conmigo, postula a la mentoría.
+            <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8">
+              Si quieres trabajar conmigo, conversemos.
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/postular">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full"
-                >
-                  Postular a la mentoría <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/postular" className="inline-block w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"
+              >
+                Trabajemos juntos <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

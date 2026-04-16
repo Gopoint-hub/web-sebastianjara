@@ -24,16 +24,17 @@ export default function Home() {
   return (
     <Layout>
       <SEO
-        title="Sebastián Jara — CMO Fraccionado"
-        description="CMO fraccionado para empresas que necesitan dirección de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU."
+        title="Sebastián Jara — CMO Fraccionado con IA aplicada"
+        description="Dirección de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU."
         keywords={[
           "CMO fraccionado",
           "fractional CMO",
+          "consultor de IA y marketing",
           "dirección de marketing",
+          "marketing con IA",
           "consultor de marketing",
           "Sebastián Jara",
           "GoPoint",
-          "marketing senior",
           "escalar empresa",
         ]}
       />
@@ -61,7 +62,7 @@ export default function Home() {
             >
               <p className="inline-flex items-center gap-2 text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-6">
                 <span className="h-px w-6 bg-primary" />
-                CMO Fraccionado
+                CMO Fraccionado · IA Aplicada
               </p>
 
               <h1 className="font-display font-semibold uppercase leading-[0.9] tracking-[0.005em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6">
@@ -71,11 +72,10 @@ export default function Home() {
               </h1>
 
               <p className="text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8">
-                Dirección de marketing senior para tu empresa{" "}
-                <span className="text-foreground">
-                  sin contratar un equipo completo
-                </span>
-                . Estrategia, gestión y ejecución desde adentro.
+                Dirección de marketing senior con{" "}
+                <span className="text-foreground">IA aplicada</span>. Sin
+                contratar un equipo completo. Estrategia, gestión y ejecución
+                desde adentro de tu empresa.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -142,22 +142,22 @@ export default function Home() {
               Qué hago
             </p>
             <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8">
-              Me sumo a tu empresa como{" "}
-              <span className="text-primary">CMO</span>, sin el costo
-              de uno interno.
+              Consultor de IA &amp; Marketing que opera como{" "}
+              <span className="text-primary">CMO Fraccionado</span>.
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <p className="text-muted-foreground leading-relaxed">
                 No soy agencia. No soy freelance. No soy consultor de un
-                workshop. Asumo la dirección de tu marketing como si fuera
-                parte de tu organización — con la experiencia de un CMO
-                senior, por una fracción del costo.
+                workshop. Asumo la dirección de tu marketing como parte de
+                tu organización — con la experiencia de un CMO senior y la
+                IA como palanca real de ejecución, por una fracción del costo
+                de contratar un equipo completo.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Defino la estrategia, priorizo, coordino equipos internos o
-                proveedores, mido y ajusto. El foco es uno: que el marketing
-                deje de ser una suma de tácticas y se convierta en un sistema
-                que escala.
+                Defino la estrategia, priorizo, coordino equipos y
+                proveedores, implemento automatización e IA donde aporta, y
+                mido. El foco es uno: que el marketing deje de ser una suma
+                de tácticas y se convierta en un sistema que escala.
               </p>
             </div>
           </motion.div>
@@ -235,19 +235,19 @@ export default function Home() {
                 n: "01",
                 title: "Estrategia",
                 body:
-                  "Diagnóstico, mercado, posicionamiento y plan. Qué hacer, qué dejar de hacer, en qué orden.",
+                  "Diagnóstico, mercado, posicionamiento y plan. Qué hacer, qué dejar de hacer, en qué orden — y dónde la IA aporta ventaja.",
               },
               {
                 n: "02",
                 title: "Gestión",
                 body:
-                  "Coordinación de equipos internos y proveedores. Procesos, KPIs y rituales de ejecución.",
+                  "Dirección de equipos internos y proveedores. Procesos, KPIs y rituales de ejecución. Me integro como si fuera tu CMO interno.",
               },
               {
                 n: "03",
-                title: "Ejecución",
+                title: "IA aplicada",
                 body:
-                  "Campañas, contenido, automatización e IA aplicada. Salir con algo cada semana, medir, iterar.",
+                  "Contenido, automatización, agentes y análisis con IA — aplicada donde mueve la aguja real, no por moda. Velocidad sin perder criterio.",
               },
             ].map((item, i) => (
               <motion.div
@@ -299,8 +299,8 @@ export default function Home() {
                 GoPoint Agency
               </a>
               . He liderado marketing para empresas en LATAM y Estados
-              Unidos — SEO, Ads, automatización, IA aplicada y sistemas
-              comerciales. Trabajo con pocos clientes a la vez para dar
+              Unidos — SEO, Ads, sistemas comerciales, automatización y
+              agentes con IA. Trabajo con pocos clientes a la vez para dar
               profundidad, no volumen.
             </p>
             <div className="mt-8">
@@ -334,11 +334,11 @@ export default function Home() {
             className="text-center"
           >
             <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
-              ¿Necesitas un CMO?
+              ¿Necesitas un CMO con IA?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed">
               Cuéntame sobre tu empresa y el momento en que estás.
-              Revisaré si encaja y te respondo personalmente.
+              Reviso si encaja y te respondo personalmente.
             </p>
             <Link href="/postular" className="inline-block w-full sm:w-auto">
               <Button

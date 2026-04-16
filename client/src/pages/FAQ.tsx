@@ -8,27 +8,27 @@ import StructuredData from "@/components/StructuredData";
 
 const faqs = [
   {
-    category: "Sobre la mentoría",
+    category: "Sobre el servicio",
     items: [
       {
-        q: "¿Qué es la Mentoría Ejecutiva 1 a 1 de Sebastián Jara?",
-        a: "Es una sesión privada estratégica donde trabajo directamente con el dueño o director de una empresa para diseñar su sistema comercial y operativo. No es un curso ni asesoría genérica: es trabajo aplicado a tu negocio específico, con foco en decisiones y plan de acción concreto.",
+        q: "¿Qué es un CMO fraccionado?",
+        a: "Un CMO fraccionado es un director de marketing senior que se integra a tu empresa a tiempo parcial. Toma las decisiones, dirige al equipo y coordina a los proveedores — igual que un CMO interno — pero por una fracción del costo de contratar uno full-time. Es el formato que uso con mis clientes.",
       },
       {
-        q: "¿En qué se diferencia de una consultoría tradicional?",
-        a: "No entrego un informe ni recomendaciones genéricas. En la sesión diseñamos juntos el sistema: vemos tu negocio, identificamos cuellos de botella específicos y salimos con un plan accionable y priorizado. El foco es ejecución, no teoría.",
+        q: "¿Y qué es eso de 'consultor de IA & Marketing'?",
+        a: "Es cómo me describo profesionalmente: opero como CMO fraccionado y mi diferencial es aplicar IA al marketing donde entrega ventaja real — automatización, agentes, contenido, análisis. No uso IA por moda; la uso cuando mueve la aguja.",
       },
       {
-        q: "¿Qué se trabaja en la sesión?",
-        a: "Diseñamos el sistema comercial completo: captación de leads, seguimiento, cierre, cotización con IA cuando aplica, dashboard de control con tus métricas reales, sistema de newsletter y retención, integración de herramientas (CRM, email, gestión, documentación) y roadmap de implementación por prioridades.",
+        q: "¿En qué se diferencia de una agencia?",
+        a: "Una agencia ejecuta lo que le pides. Un CMO fraccionado decide qué pedir y por qué. Soy quien define estrategia, prioridades y KPIs. Si ya tienes una agencia, puedo coordinarla; si no, te ayudo a elegirla o montar el equipo.",
       },
       {
-        q: "¿Qué resultados obtengo al finalizar?",
-        a: "Sales con diagnóstico claro de tu situación actual, cuellos de botella identificados, diseño del sistema a implementar, prioridades definidas por impacto y próximos pasos accionables con timeline.",
+        q: "¿En qué se diferencia de un consultor tradicional?",
+        a: "Un consultor entrega un informe y se va. Yo me sumo a la operación diaria — decido, dirijo, mido y ajusto semana a semana. Me hago cargo del resultado, no solo del diagnóstico.",
       },
       {
-        q: "¿La mentoría es presencial o remota?",
-        a: "La sesión es remota, lo que me permite trabajar con empresas en Chile, Perú, Colombia, México y Estados Unidos sin restricción geográfica.",
+        q: "¿Cómo usas la IA en marketing?",
+        a: "Donde tiene impacto real: automatización de workflows, generación y curaduría de contenido, agentes para atención y cotización, análisis y segmentación, personalización de campañas. Nunca como sustituto del criterio estratégico — como multiplicador de velocidad y escala.",
       },
     ],
   },
@@ -36,37 +36,41 @@ const faqs = [
     category: "Para quién es",
     items: [
       {
-        q: "¿Para quién es esta mentoría?",
-        a: "Para dueños de empresa, socios o directores de área comercial que ya venden pero tienen desorden en procesos, herramientas desconectadas o necesitan un plan claro para escalar. Es para quienes buscan sistemas, no dependencia.",
+        q: "¿Para quién es este servicio?",
+        a: "Para dueños, CEOs o socios de empresas que ya facturan y necesitan dirección de marketing senior — pero todavía no justifican contratar un CMO full-time, o prefieren ganar velocidad trayendo a alguien con experiencia y criterio de IA desde adentro.",
       },
       {
         q: "¿Para quién NO es?",
-        a: "No es para estudiantes, personas sin empresa activa, quienes buscan un curso o teoría, ni para quienes quieren asesoría general sin compromiso de ejecución.",
-      },
-      {
-        q: "¿Necesito tener experiencia en tecnología o automatización?",
-        a: "No. El objetivo es diseñar el sistema adecuado para tu nivel actual y tus recursos. Trabajamos con las herramientas que ya tienes o con las más simples que sirvan para tu caso.",
+        a: "No es para startups pre-revenue, para emprendedores que buscan un curso, ni para empresas que quieren delegar marketing completo a un tercero sin involucramiento. Tampoco es para quienes buscan tactical de bajo costo: soy una cabeza senior, y ese es el valor.",
       },
       {
         q: "¿Funciona para cualquier industria?",
-        a: "Sí, siempre que tengas un proceso comercial activo. He trabajado con empresas de servicios, tecnología, retail, consultoría y más, en Chile, Perú, Colombia, México y EE.UU.",
+        a: "Siempre que haya un proceso comercial activo y demanda en el mercado. He trabajado con empresas de servicios, tecnología, retail, consultoría y más, en Chile, Perú, Colombia, México y EE.UU.",
+      },
+      {
+        q: "¿Necesito tener equipo de marketing ya?",
+        a: "No necesariamente. Si lo tienes, lo dirijo. Si no, diseñamos el stack mínimo viable y traemos proveedores donde hace falta. La IA también permite operar más ligero en las primeras etapas.",
       },
     ],
   },
   {
-    category: "Proceso de postulación",
+    category: "Proceso y formato",
     items: [
       {
-        q: "¿Cómo funciona el proceso para trabajar con Sebastián Jara?",
-        a: "Tres pasos: (1) Completas el formulario de postulación con información de tu empresa y tu desafío actual. (2) Reviso tu caso personalmente y te confirmo si la mentoría encaja con tu situación. (3) Agendamos la sesión y trabajamos con foco total.",
+        q: "¿Cómo funciona el proceso para trabajar juntos?",
+        a: "Cuatro pasos: (1) Postulas con un formulario breve. (2) Reviso tu caso personalmente y confirmo fit. (3) Hablamos por video para alinear alcance y expectativas. (4) Entro en la operación: audito en las primeras semanas y empiezo a dirigir.",
       },
       {
         q: "¿Por qué hay un proceso de postulación?",
-        a: "Porque los cupos son limitados por agenda. Prefiero trabajar con pocos clientes de forma directa y garantizar profundidad sobre volumen. El formulario me permite evaluar si tu caso es el adecuado para que la mentoría genere valor real.",
+        a: "Porque trabajo con pocos clientes a la vez. Prefiero profundidad sobre volumen. El formulario me permite evaluar si encaja con tu momento y si voy a poder entregar el valor que justifique el costo.",
       },
       {
-        q: "¿Cuánto tiempo tarda el proceso desde la postulación?",
-        a: "Reviso cada postulación personalmente. El tiempo depende de la disponibilidad de agenda en el momento en que aplicas.",
+        q: "¿El servicio es presencial o remoto?",
+        a: "Remoto. Eso me permite trabajar con empresas en Chile, Perú, Colombia, México y Estados Unidos sin restricción geográfica. Puedo viajar puntualmente para kick-offs o hitos cuando aporta.",
+      },
+      {
+        q: "¿Cuánto dura el compromiso?",
+        a: "Depende del caso, pero rara vez funciona en menos de 3 meses. El primer mes es diagnóstico y plan; desde ahí la dirección se mide en trimestres. Lo conversamos en la llamada de alineación.",
       },
       {
         q: "¿Cómo postulo?",
@@ -79,18 +83,18 @@ const faqs = [
     items: [
       {
         q: "¿Quién es Sebastián Jara?",
-        a: "Soy Founder & CEO de GoPoint Agency, con 15+ años de experiencia en marketing digital, SEO, Ads y automatización. Trabajo con empresas en LATAM y EE.UU. Mi enfoque es construir sistemas: atraer demanda, convertirla en ventas y ordenar la operación, usando IA y automatización como aceleradores.",
+        a: "Founder & CEO de GoPoint Agency, con 15+ años de experiencia liderando marketing digital, SEO, Ads, sistemas comerciales y automatización con IA. Trabaja con empresas en LATAM y EE.UU. Hoy opera como CMO fraccionado y consultor de IA & Marketing.",
       },
       {
         q: "¿Qué es GoPoint Agency?",
-        a: "GoPoint es la agencia de marketing digital y automatización que fundé, especializada en sistemas de crecimiento para empresas. También soy director de FrutillarHoy y MarketingHoy.com.",
+        a: "GoPoint es la agencia de marketing digital y automatización que Sebastián fundó, especializada en sistemas de crecimiento con IA aplicada. También es director de FrutillarHoy y MarketingHoy.com.",
       },
       {
-        q: "¿Con qué países trabaja Sebastián Jara?",
-        a: "Trabajo remotamente con empresas en Chile, Perú, Colombia, México y Estados Unidos.",
+        q: "¿Con qué países trabaja?",
+        a: "Trabaja remotamente con empresas en Chile, Perú, Colombia, México y Estados Unidos.",
       },
       {
-        q: "¿Dónde puedo seguir a Sebastián Jara?",
+        q: "¿Dónde puedo seguirlo?",
         a: "En LinkedIn (linkedin.com/in/sebastianjarabravo), YouTube (@sebastianjaracom), TikTok (@sebastianjara.com) y el canal de WhatsApp de sebastianjara.com.",
       },
     ],
@@ -116,45 +120,55 @@ export default function FAQ() {
   return (
     <Layout>
       <SEO
-        title="Preguntas frecuentes | Sebastián Jara — Mentoría Ejecutiva"
-        description="Respuestas a las preguntas más comunes sobre la Mentoría Ejecutiva 1 a 1 de Sebastián Jara: qué es, para quién es, cómo postular y qué resultados esperar."
-        keywords={["preguntas frecuentes mentoría ejecutiva", "FAQ mentoría 1 a 1", "cómo postular mentoría Sebastián Jara", "mentoría ejecutiva Chile", "consultoría empresarial LATAM"]}
+        title="Preguntas frecuentes | Sebastián Jara — CMO Fraccionado con IA"
+        description="Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebastián Jara: qué es, para quién, cómo trabaja y cómo postular."
+        keywords={[
+          "preguntas frecuentes CMO fraccionado",
+          "FAQ consultor de IA y marketing",
+          "cómo postular Sebastián Jara",
+          "CMO fraccionado Chile",
+          "consultoría marketing LATAM",
+        ]}
         canonical="https://sebastianjara.com/faq"
       />
       <StructuredData data={FAQ_SCHEMA} />
 
       {/* Hero */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-3xl"
           >
-            <h1 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">
+            <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5">
               Preguntas frecuentes
+            </p>
+            <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+              Las respuestas que casi todos me hacen antes de postular.
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Todo lo que necesitas saber sobre la Mentoría Ejecutiva 1 a 1 y cómo trabajar conmigo.
+            <p className="text-base md:text-lg text-muted-foreground">
+              Todo lo que necesitas saber sobre el servicio de CMO
+              fraccionado con IA aplicada y cómo trabajar conmigo.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="pb-20">
+      <section className="pb-14 md:pb-20">
         <div className="container">
-          <div className="max-w-3xl space-y-16">
+          <div className="max-w-3xl space-y-14 md:space-y-16">
             {faqs.map((category, ci) => (
               <motion.div
                 key={ci}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-xl font-semibold mb-8 text-primary">
+                <h2 className="font-display text-xl md:text-2xl mb-8 text-primary">
                   {category.category}
                 </h2>
                 <div className="space-y-6">
@@ -163,12 +177,14 @@ export default function FAQ() {
                       key={ii}
                       initial={{ opacity: 0, y: 16 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, margin: "-80px" }}
                       transition={{ duration: 0.4, delay: ii * 0.05 }}
                       className="border-b border-border/40 pb-6"
                     >
                       <h3 className="font-semibold mb-3">{item.q}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                      <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                        {item.a}
+                      </p>
                     </motion.div>
                   ))}
                 </div>
@@ -179,27 +195,27 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 border-t border-border/30">
+      <section className="py-16 md:py-24 border-t border-border/30">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-4">
               ¿Tienes más preguntas?
             </h2>
             <p className="text-muted-foreground mb-8">
               Postula y me cuentas tu caso directamente.
             </p>
-            <Link href="/postular">
+            <Link href="/postular" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"
               >
-                Postular a la mentoría <ArrowRight className="ml-2 h-4 w-4" />
+                Trabajemos juntos <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </motion.div>
