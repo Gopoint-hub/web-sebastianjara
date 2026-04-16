@@ -104,8 +104,8 @@ import { useLocation as useLocation3 } from "wouter";
 
 // client/src/components/Layout.tsx
 import { Link as Link2, useLocation as useLocation2 } from "wouter";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { useEffect as useEffect2, useState } from "react";
 
 // client/src/components/Breadcrumbs.tsx
 import { Link, useLocation } from "wouter";
@@ -176,16 +176,25 @@ function Layout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     { label: "Inicio", href: "/" },
-    { label: "Mentor\xEDa", href: "/mentoria" },
-    { label: "Sobre m\xED", href: "/sobre-mi" }
+    { label: "C\xF3mo trabajo", href: "/mentoria" },
+    { label: "Sobre m\xED", href: "/sobre-mi" },
+    { label: "FAQ", href: "/faq" }
   ];
-  const scrollToSection = (href) => {
-    if (location === href) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  useEffect2(() => {
+    if (typeof document === "undefined") return;
+    const { body } = document;
+    if (isMenuOpen) {
+      const prev = body.style.overflow;
+      body.style.overflow = "hidden";
+      return () => {
+        body.style.overflow = prev;
+      };
     }
+  }, [isMenuOpen]);
+  useEffect2(() => {
     setIsMenuOpen(false);
-  };
-  return /* @__PURE__ */ jsxs3("div", { className: "min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground overflow-x-hidden", children: [
+  }, [location]);
+  return /* @__PURE__ */ jsxs3("div", { className: "min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground", children: [
     /* @__PURE__ */ jsx5(
       "a",
       {
@@ -194,66 +203,172 @@ function Layout({ children }) {
         children: "Saltar al contenido"
       }
     ),
-    /* @__PURE__ */ jsx5("header", { className: "fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50", children: /* @__PURE__ */ jsxs3("div", { className: "container flex items-center justify-between h-16 md:h-20", children: [
-      /* @__PURE__ */ jsx5(Link2, { href: "/", className: "block hover:opacity-80 transition-opacity", children: /* @__PURE__ */ jsx5("img", { src: "/images/logo-dark.webp", alt: "Sebasti\xE1n Jara", className: "h-8 w-auto", width: "88", height: "32" }) }),
-      /* @__PURE__ */ jsxs3("nav", { className: "hidden md:flex items-center gap-8", children: [
-        navItems.map((item) => /* @__PURE__ */ jsx5(Link2, { href: item.href, children: /* @__PURE__ */ jsx5(
-          "span",
-          {
-            onClick: () => scrollToSection(item.href),
-            className: cn(
-              "text-sm font-medium hover:text-foreground transition-colors cursor-pointer",
-              location === item.href ? "text-foreground" : "text-muted-foreground"
-            ),
-            children: item.label
-          }
-        ) }, item.href)),
-        /* @__PURE__ */ jsx5(Link2, { href: "/postular", children: /* @__PURE__ */ jsx5(
-          Button,
-          {
-            size: "sm",
-            className: "bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-full px-5",
-            children: "Postular"
-          }
-        ) })
-      ] }),
-      /* @__PURE__ */ jsx5("div", { className: "flex items-center gap-4 md:hidden", children: /* @__PURE__ */ jsx5(
-        "button",
-        {
-          className: "p-2 text-foreground",
-          onClick: () => setIsMenuOpen(!isMenuOpen),
-          children: isMenuOpen ? /* @__PURE__ */ jsx5(X, {}) : /* @__PURE__ */ jsx5(Menu, {})
-        }
-      ) })
-    ] }) }),
-    isMenuOpen && /* @__PURE__ */ jsx5("div", { className: "fixed inset-0 z-40 bg-background pt-20 px-6 md:hidden", children: /* @__PURE__ */ jsx5("nav", { className: "flex flex-col gap-6 text-lg", children: navItems.map((item) => /* @__PURE__ */ jsx5(Link2, { href: item.href, children: /* @__PURE__ */ jsx5(
-      "span",
+    /* @__PURE__ */ jsx5(
+      "header",
       {
-        onClick: () => scrollToSection(item.href),
-        className: "border-b border-border/50 pb-4 font-medium cursor-pointer block",
-        children: item.label
+        className: "fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50",
+        style: { paddingTop: "env(safe-area-inset-top)" },
+        children: /* @__PURE__ */ jsxs3("div", { className: "container flex items-center justify-between h-16 md:h-20", children: [
+          /* @__PURE__ */ jsx5(
+            Link2,
+            {
+              href: "/",
+              className: "flex items-center hover:opacity-80 transition-opacity -ml-1 px-1 py-2",
+              "aria-label": "Sebasti\xE1n Jara \u2014 Inicio",
+              children: /* @__PURE__ */ jsx5(
+                "img",
+                {
+                  src: "/images/logo-dark.webp",
+                  alt: "Sebasti\xE1n Jara",
+                  className: "h-7 md:h-8 w-auto",
+                  width: "88",
+                  height: "32"
+                }
+              )
+            }
+          ),
+          /* @__PURE__ */ jsxs3("nav", { className: "hidden md:flex items-center gap-8", children: [
+            navItems.map((item) => /* @__PURE__ */ jsx5(Link2, { href: item.href, children: /* @__PURE__ */ jsx5(
+              "span",
+              {
+                className: cn(
+                  "text-sm font-medium hover:text-foreground transition-colors cursor-pointer",
+                  location === item.href ? "text-foreground" : "text-muted-foreground"
+                ),
+                children: item.label
+              }
+            ) }, item.href)),
+            /* @__PURE__ */ jsx5(Link2, { href: "/postular", children: /* @__PURE__ */ jsx5(
+              Button,
+              {
+                size: "sm",
+                className: "bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-full px-5 h-10",
+                children: "Trabajemos"
+              }
+            ) })
+          ] }),
+          /* @__PURE__ */ jsx5(
+            "button",
+            {
+              type: "button",
+              onClick: () => setIsMenuOpen((v) => !v),
+              "aria-expanded": isMenuOpen,
+              "aria-controls": "mobile-nav",
+              "aria-label": isMenuOpen ? "Cerrar men\xFA" : "Abrir men\xFA",
+              className: "md:hidden -mr-2 inline-flex items-center justify-center h-11 w-11 rounded-md text-foreground hover:bg-foreground/5 transition-colors",
+              children: isMenuOpen ? /* @__PURE__ */ jsx5(X, { className: "h-6 w-6" }) : /* @__PURE__ */ jsx5(Menu, { className: "h-6 w-6" })
+            }
+          )
+        ] })
       }
-    ) }, item.href)) }) }),
+    ),
+    isMenuOpen && /* @__PURE__ */ jsxs3(
+      "div",
+      {
+        id: "mobile-nav",
+        className: "fixed inset-0 z-40 bg-background md:hidden flex flex-col",
+        style: {
+          paddingTop: "calc(4rem + env(safe-area-inset-top))",
+          paddingBottom: "env(safe-area-inset-bottom)"
+        },
+        children: [
+          /* @__PURE__ */ jsx5("nav", { className: "flex-1 overflow-y-auto px-6 pt-8 pb-6", children: /* @__PURE__ */ jsx5("ul", { className: "flex flex-col gap-2", children: navItems.map((item) => /* @__PURE__ */ jsx5("li", { children: /* @__PURE__ */ jsx5(Link2, { href: item.href, children: /* @__PURE__ */ jsx5(
+            "span",
+            {
+              className: cn(
+                "block py-4 text-2xl font-display border-b border-border/50 cursor-pointer transition-colors",
+                location === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              ),
+              children: item.label
+            }
+          ) }) }, item.href)) }) }),
+          /* @__PURE__ */ jsx5("div", { className: "px-6 pb-8 pt-4 border-t border-border/50", children: /* @__PURE__ */ jsx5(Link2, { href: "/postular", className: "block", children: /* @__PURE__ */ jsxs3(
+            Button,
+            {
+              size: "lg",
+              className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 text-base rounded-full w-full",
+              children: [
+                "Trabajemos juntos ",
+                /* @__PURE__ */ jsx5(ArrowRight, { className: "ml-2 h-4 w-4" })
+              ]
+            }
+          ) }) })
+        ]
+      }
+    ),
     /* @__PURE__ */ jsxs3("main", { id: "main-content", className: "flex-1 pt-16 md:pt-20", children: [
       /* @__PURE__ */ jsx5(Breadcrumbs, {}),
       children
     ] }),
-    /* @__PURE__ */ jsx5("footer", { className: "border-t border-border/50 py-12", children: /* @__PURE__ */ jsx5("div", { className: "container", children: /* @__PURE__ */ jsxs3("div", { className: "flex flex-col md:flex-row justify-between items-start md:items-center gap-6", children: [
-      /* @__PURE__ */ jsxs3("div", { children: [
-        /* @__PURE__ */ jsx5("img", { src: "/images/logo-dark.webp", alt: "Sebasti\xE1n Jara", className: "h-6 w-auto mb-4 opacity-60", width: "66", height: "24", loading: "lazy" }),
-        /* @__PURE__ */ jsxs3("p", { className: "text-xs text-muted-foreground", children: [
-          "\xA9 ",
-          (/* @__PURE__ */ new Date()).getFullYear(),
-          " Sebasti\xE1n Jara. Todos los derechos reservados."
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs3("div", { className: "flex gap-6 text-sm text-muted-foreground", children: [
-        /* @__PURE__ */ jsx5("a", { href: "https://www.youtube.com/@sebastianjaracom", target: "_blank", rel: "noreferrer me", className: "hover:text-foreground transition-colors", children: "YouTube" }),
-        /* @__PURE__ */ jsx5("a", { href: "https://www.tiktok.com/@sebastianjara.com", target: "_blank", rel: "noreferrer me", className: "hover:text-foreground transition-colors", children: "TikTok" }),
-        /* @__PURE__ */ jsx5("a", { href: WHATSAPP_CHANNEL_URL, target: "_blank", rel: "noreferrer", className: "hover:text-foreground transition-colors", children: "WhatsApp" }),
-        /* @__PURE__ */ jsx5("a", { href: "https://www.linkedin.com/in/sebastianjarabravo/", target: "_blank", rel: "noreferrer me", className: "hover:text-foreground transition-colors", children: "LinkedIn" })
-      ] })
-    ] }) }) })
+    /* @__PURE__ */ jsx5(
+      "footer",
+      {
+        className: "border-t border-border/50 py-10 md:py-12",
+        style: { paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))" },
+        children: /* @__PURE__ */ jsx5("div", { className: "container", children: /* @__PURE__ */ jsxs3("div", { className: "flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-6", children: [
+          /* @__PURE__ */ jsxs3("div", { children: [
+            /* @__PURE__ */ jsx5(
+              "img",
+              {
+                src: "/images/logo-dark.webp",
+                alt: "Sebasti\xE1n Jara",
+                className: "h-6 w-auto mb-4 opacity-60",
+                width: "66",
+                height: "24",
+                loading: "lazy"
+              }
+            ),
+            /* @__PURE__ */ jsxs3("p", { className: "text-xs text-muted-foreground", children: [
+              "\xA9 ",
+              (/* @__PURE__ */ new Date()).getFullYear(),
+              " Sebasti\xE1n Jara \xB7 CMO Fraccionado"
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs3("div", { className: "flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground", children: [
+            /* @__PURE__ */ jsx5(
+              "a",
+              {
+                href: "https://www.youtube.com/@sebastianjaracom",
+                target: "_blank",
+                rel: "noreferrer me",
+                className: "hover:text-foreground transition-colors py-1",
+                children: "YouTube"
+              }
+            ),
+            /* @__PURE__ */ jsx5(
+              "a",
+              {
+                href: "https://www.tiktok.com/@sebastianjara.com",
+                target: "_blank",
+                rel: "noreferrer me",
+                className: "hover:text-foreground transition-colors py-1",
+                children: "TikTok"
+              }
+            ),
+            /* @__PURE__ */ jsx5(
+              "a",
+              {
+                href: WHATSAPP_CHANNEL_URL,
+                target: "_blank",
+                rel: "noreferrer",
+                className: "hover:text-foreground transition-colors py-1",
+                children: "WhatsApp"
+              }
+            ),
+            /* @__PURE__ */ jsx5(
+              "a",
+              {
+                href: "https://www.linkedin.com/in/sebastianjarabravo/",
+                target: "_blank",
+                rel: "noreferrer me",
+                className: "hover:text-foreground transition-colors py-1",
+                children: "LinkedIn"
+              }
+            )
+          ] })
+        ] }) })
+      }
+    )
   ] });
 }
 
@@ -366,11 +481,11 @@ var ErrorBoundary = class extends Component {
 var ErrorBoundary_default = ErrorBoundary;
 
 // client/src/contexts/ThemeContext.tsx
-import { createContext, useContext, useEffect as useEffect2 } from "react";
+import { createContext, useContext, useEffect as useEffect3 } from "react";
 import { jsx as jsx8 } from "react/jsx-runtime";
 var ThemeContext = createContext(void 0);
 function ThemeProvider({ children }) {
-  useEffect2(() => {
+  useEffect3(() => {
     const root = window.document.documentElement;
     root.classList.remove("light");
     root.classList.add("dark");
@@ -381,10 +496,10 @@ function ThemeProvider({ children }) {
 // client/src/pages/Home.tsx
 import { motion } from "framer-motion";
 import { Link as Link3 } from "wouter";
-import { ArrowRight as ArrowRight2, Check, X as XIcon } from "lucide-react";
+import { ArrowRight as ArrowRight3, Check } from "lucide-react";
 
 // client/src/components/SEO.tsx
-import { useEffect as useEffect3 } from "react";
+import { useEffect as useEffect4 } from "react";
 import { useLocation as useLocation4 } from "wouter";
 function setMeta(attr, key, content) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
@@ -408,7 +523,7 @@ function SEO({
   const [location] = useLocation4();
   const baseUrl = "https://sebastianjara.com";
   const currentUrl = canonical || `${baseUrl}${location}`;
-  useEffect3(() => {
+  useEffect4(() => {
     document.title = title;
     setMeta("name", "description", description);
     if (keywords.length) {
@@ -441,277 +556,321 @@ import { jsx as jsx9, jsxs as jsxs6 } from "react/jsx-runtime";
 var fadeInUp = {
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
 };
 var stagger = {
   animate: { transition: { staggerChildren: 0.08 } }
 };
 var itemFade = {
   initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 function Home2() {
   return /* @__PURE__ */ jsxs6(Layout, { children: [
     /* @__PURE__ */ jsx9(
       SEO,
       {
-        title: "Mentor\xEDa Ejecutiva 1 a 1 | Sebasti\xE1n Jara",
-        description: "Mentor\xEDa ejecutiva 1 a 1 para due\xF1os de empresa: dise\xF1a tu sistema comercial, automatizaci\xF3n y roadmap para escalar con orden y datos.",
-        keywords: ["mentor\xEDa ejecutiva", "consultor\xEDa 1 a 1", "sistemas de crecimiento", "automatizaci\xF3n con IA", "sistema comercial", "mentor\xEDa empresarial", "escalar negocio", "Sebasti\xE1n Jara"]
+        title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+        description: "CMO fraccionado para empresas que necesitan direcci\xF3n de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
+        keywords: [
+          "CMO fraccionado",
+          "fractional CMO",
+          "direcci\xF3n de marketing",
+          "consultor de marketing",
+          "Sebasti\xE1n Jara",
+          "GoPoint",
+          "marketing senior",
+          "escalar empresa"
+        ]
       }
     ),
-    /* @__PURE__ */ jsx9("section", { className: "min-h-[85vh] flex items-center py-20", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
+    /* @__PURE__ */ jsxs6("section", { className: "relative overflow-hidden", children: [
+      /* @__PURE__ */ jsx9(
+        "div",
+        {
+          "aria-hidden": "true",
+          className: "pointer-events-none absolute inset-0 -z-10",
+          style: {
+            background: "radial-gradient(circle at 85% 15%, oklch(0.65 0.22 40 / 0.18), transparent 45%), radial-gradient(circle at 10% 90%, oklch(0.65 0.22 40 / 0.10), transparent 40%)"
+          }
+        }
+      ),
+      /* @__PURE__ */ jsx9("div", { className: "container pt-14 pb-16 md:pt-24 md:pb-24", children: /* @__PURE__ */ jsxs6("div", { className: "grid md:grid-cols-[1.35fr_1fr] items-center gap-10 md:gap-16", children: [
+        /* @__PURE__ */ jsxs6(
+          motion.div,
+          {
+            initial: "initial",
+            animate: "animate",
+            variants: fadeInUp,
+            className: "order-2 md:order-1",
+            children: [
+              /* @__PURE__ */ jsxs6("p", { className: "inline-flex items-center gap-2 text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-6", children: [
+                /* @__PURE__ */ jsx9("span", { className: "h-px w-6 bg-primary" }),
+                "CMO Fraccionado"
+              ] }),
+              /* @__PURE__ */ jsxs6("h1", { className: "font-display font-semibold leading-[0.9] tracking-tight text-[clamp(3rem,11vw,7.5rem)] mb-6", children: [
+                "Sebasti\xE1n",
+                /* @__PURE__ */ jsx9("br", {}),
+                /* @__PURE__ */ jsx9("span", { className: "italic font-normal text-primary", children: "Jara" })
+              ] }),
+              /* @__PURE__ */ jsxs6("p", { className: "text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8", children: [
+                "Direcci\xF3n de marketing senior para tu empresa",
+                " ",
+                /* @__PURE__ */ jsx9("span", { className: "text-foreground", children: "sin contratar un equipo completo" }),
+                ". Estrategia, gesti\xF3n y ejecuci\xF3n desde adentro."
+              ] }),
+              /* @__PURE__ */ jsxs6("div", { className: "flex flex-col sm:flex-row gap-3", children: [
+                /* @__PURE__ */ jsx9(Link3, { href: "/postular", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
+                  Button,
+                  {
+                    size: "lg",
+                    className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full w-full sm:w-auto",
+                    children: [
+                      "Trabajemos juntos ",
+                      /* @__PURE__ */ jsx9(ArrowRight3, { className: "ml-2 h-4 w-4" })
+                    ]
+                  }
+                ) }),
+                /* @__PURE__ */ jsx9(Link3, { href: "/mentoria", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsx9(
+                  Button,
+                  {
+                    size: "lg",
+                    variant: "ghost",
+                    className: "h-14 px-6 text-base rounded-full w-full sm:w-auto hover:bg-foreground/5",
+                    children: "C\xF3mo trabajo"
+                  }
+                ) })
+              ] }),
+              /* @__PURE__ */ jsx9("p", { className: "text-xs text-muted-foreground mt-6", children: "Chile \xB7 LATAM \xB7 EE.UU. \u2014 Trabajo con pocos clientes a la vez." })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsx9(
+          motion.div,
+          {
+            initial: { opacity: 0, scale: 0.96 },
+            animate: { opacity: 1, scale: 1 },
+            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+            className: "order-1 md:order-2 flex justify-center md:justify-end",
+            children: /* @__PURE__ */ jsxs6("div", { className: "relative", children: [
+              /* @__PURE__ */ jsx9(
+                "div",
+                {
+                  "aria-hidden": "true",
+                  className: "absolute -inset-4 md:-inset-6 rounded-full bg-primary/10 blur-3xl"
+                }
+              ),
+              /* @__PURE__ */ jsx9(
+                "img",
+                {
+                  src: "/images/sebastian-jara.webp",
+                  alt: "Retrato de Sebasti\xE1n Jara",
+                  width: "320",
+                  height: "320",
+                  loading: "eager",
+                  className: "relative w-52 h-52 md:w-80 md:h-80 rounded-full object-cover border border-border/50 shadow-2xl"
+                }
+              )
+            ] })
+          }
+        )
+      ] }) })
+    ] }),
+    /* @__PURE__ */ jsx9("section", { className: "py-16 md:py-24 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container max-w-4xl", children: /* @__PURE__ */ jsxs6(
       motion.div,
       {
-        initial: "initial",
-        animate: "animate",
-        variants: fadeInUp,
-        className: "max-w-3xl mx-auto text-center",
+        initial: { opacity: 0, y: 20 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, margin: "-80px" },
+        transition: { duration: 0.6 },
         children: [
-          /* @__PURE__ */ jsx9("h1", { className: "text-4xl md:text-6xl font-display font-bold mb-6 leading-tight", children: "Mentor\xEDa Ejecutiva 1 a 1" }),
-          /* @__PURE__ */ jsx9("p", { className: "text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto", children: "Sesi\xF3n privada estrat\xE9gica para dise\xF1ar el sistema comercial y operativo que tu empresa necesita para escalar con orden y datos." }),
-          /* @__PURE__ */ jsx9("p", { className: "text-sm text-primary font-medium mb-10", children: "No es curso. No es teor\xEDa. Es trabajo aplicado a tu empresa." }),
-          /* @__PURE__ */ jsx9("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: /* @__PURE__ */ jsx9(Link3, { href: "/postular", children: /* @__PURE__ */ jsxs6(
-            Button,
-            {
-              size: "lg",
-              className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
-              children: [
-                "Postular a la mentor\xEDa ",
-                /* @__PURE__ */ jsx9(ArrowRight2, { className: "ml-2 h-4 w-4" })
-              ]
-            }
-          ) }) }),
-          /* @__PURE__ */ jsx9("p", { className: "text-xs text-muted-foreground mt-6", children: "Cupos limitados por agenda." })
+          /* @__PURE__ */ jsx9("p", { className: "text-sm font-medium tracking-[0.2em] uppercase text-primary mb-6", children: "Qu\xE9 hago" }),
+          /* @__PURE__ */ jsxs6("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8", children: [
+            "Me sumo a tu empresa como",
+            " ",
+            /* @__PURE__ */ jsx9("span", { className: "italic text-primary", children: "CMO" }),
+            ", sin el costo de uno interno."
+          ] }),
+          /* @__PURE__ */ jsxs6("div", { className: "grid md:grid-cols-2 gap-8 mt-12", children: [
+            /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: "No soy agencia. No soy freelance. No soy consultor de un workshop. Asumo la direcci\xF3n de tu marketing como si fuera parte de tu organizaci\xF3n \u2014 con la experiencia de un CMO senior, por una fracci\xF3n del costo." }),
+            /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: "Defino la estrategia, priorizo, coordino equipos internos o proveedores, mido y ajusto. El foco es uno: que el marketing deje de ser una suma de t\xE1cticas y se convierta en un sistema que escala." })
+          ] })
         ]
       }
     ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-2xl mx-auto",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-10 text-center", children: "Esto es para ti si\u2026" }),
-          /* @__PURE__ */ jsx9(
-            motion.div,
+    /* @__PURE__ */ jsx9("section", { className: "py-16 md:py-24 border-t border-border/30", children: /* @__PURE__ */ jsxs6("div", { className: "container max-w-3xl", children: [
+      /* @__PURE__ */ jsxs6(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: "-80px" },
+          transition: { duration: 0.6 },
+          children: [
+            /* @__PURE__ */ jsx9("p", { className: "text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4 text-center", children: "Para qui\xE9n" }),
+            /* @__PURE__ */ jsx9("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-12 text-center", children: "Esto encaja si\u2026" })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsx9(
+        motion.ul,
+        {
+          variants: stagger,
+          initial: "initial",
+          whileInView: "animate",
+          viewport: { once: true, margin: "-80px" },
+          className: "space-y-4",
+          children: [
+            "Tu empresa factura, pero el marketing depende de ti o de un junior sin direcci\xF3n.",
+            "Contrataste agencia y sentiste que faltaba alguien que decidiera por tu lado.",
+            "Necesitas visi\xF3n estrat\xE9gica, no solo t\xE1cticas sueltas.",
+            "Buscas resultados medibles y un sistema que no colapse si t\xFA te vas una semana.",
+            "Prefieres pagar por una cabeza senior antes que por un equipo completo."
+          ].map((text, i) => /* @__PURE__ */ jsxs6(
+            motion.li,
             {
-              variants: stagger,
-              initial: "initial",
-              whileInView: "animate",
-              viewport: { once: true },
-              className: "space-y-5",
+              variants: itemFade,
+              className: "flex items-start gap-4 py-2",
               children: [
-                "Eres due\xF1o/socio o lideras el \xE1rea comercial.",
-                "Ya vendes, pero hay desorden en procesos y herramientas.",
-                "Tienes CRM, email, gesti\xF3n de tareas o dashboards, pero todo est\xE1 separado.",
-                "Quieres escalar sin improvisaci\xF3n.",
-                "Necesitas claridad y un plan de acci\xF3n."
-              ].map((text, i) => /* @__PURE__ */ jsxs6(motion.div, { variants: itemFade, className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx9("div", { className: "mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center", children: /* @__PURE__ */ jsx9(Check, { className: "h-3 w-3 text-primary" }) }),
-                /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground", children: text })
-              ] }, i))
-            }
-          )
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { id: "mentoria", className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-3xl mx-auto",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-12 text-center", children: "Lo que dise\xF1amos en la mentor\xEDa" }),
-          /* @__PURE__ */ jsx9("div", { className: "grid md:grid-cols-2 gap-6", children: [
-            "Arquitectura del sistema comercial (captaci\xF3n \u2192 lead \u2192 cierre).",
-            "Gesti\xF3n de leads y seguimiento.",
-            "Cotizaci\xF3n r\xE1pida con IA (cuando aplique).",
-            "Dashboard de control: ventas, leads, actividad y resultados.",
-            "Newsletter con IA y sistema de retenci\xF3n.",
-            "Gesti\xF3n de pendientes y operaci\xF3n.",
-            "Integraci\xF3n de herramientas (CRM, email, gesti\xF3n, documentaci\xF3n).",
-            "Roadmap de implementaci\xF3n por prioridades."
-          ].map((text, i) => /* @__PURE__ */ jsx9(
-            motion.div,
-            {
-              initial: { opacity: 0, y: 16 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: { duration: 0.4, delay: i * 0.06 },
-              className: "glass-panel rounded-lg p-5",
-              children: /* @__PURE__ */ jsxs6("div", { className: "flex items-start gap-3", children: [
-                /* @__PURE__ */ jsx9("span", { className: "text-primary font-mono text-sm font-bold mt-0.5", children: String(i + 1).padStart(2, "0") }),
-                /* @__PURE__ */ jsx9("p", { className: "text-sm text-foreground/90", children: text })
-              ] })
-            },
-            i
-          )) })
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-16 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsx9("div", { className: "max-w-2xl mx-auto text-center", children: /* @__PURE__ */ jsx9("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: /* @__PURE__ */ jsx9(Link3, { href: "/postular", children: /* @__PURE__ */ jsxs6(
-      Button,
-      {
-        size: "lg",
-        className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
-        children: [
-          "Postular a la mentor\xEDa ",
-          /* @__PURE__ */ jsx9(ArrowRight2, { className: "ml-2 h-4 w-4" })
-        ]
-      }
-    ) }) }) }) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-2xl mx-auto",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-10 text-center", children: "Lo que NO es" }),
-          /* @__PURE__ */ jsx9(
-            motion.div,
-            {
-              variants: stagger,
-              initial: "initial",
-              whileInView: "animate",
-              viewport: { once: true },
-              className: "space-y-4",
-              children: [
-                "No es un curso.",
-                "No es una clase b\xE1sica.",
-                "No es una asesor\xEDa general.",
-                "No es para estudiantes.",
-                "No es para curiosos."
-              ].map((text, i) => /* @__PURE__ */ jsxs6(motion.div, { variants: itemFade, className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx9("div", { className: "mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-destructive/10 flex items-center justify-center", children: /* @__PURE__ */ jsx9(XIcon, { className: "h-3 w-3 text-destructive" }) }),
-                /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground", children: text })
-              ] }, i))
-            }
-          ),
-          /* @__PURE__ */ jsx9("p", { className: "text-foreground font-medium mt-8 text-center", children: "Si buscas ejecuci\xF3n y estructura, esta mentor\xEDa encaja." })
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-2xl mx-auto",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-10 text-center", children: "Te vas con" }),
-          /* @__PURE__ */ jsx9(
-            motion.div,
-            {
-              variants: stagger,
-              initial: "initial",
-              whileInView: "animate",
-              viewport: { once: true },
-              className: "space-y-5",
-              children: [
-                "Diagn\xF3stico claro.",
-                "Cuellos de botella identificados.",
-                "Dise\xF1o del sistema a implementar.",
-                "Prioridades definidas.",
-                "Pr\xF3ximos pasos accionables."
-              ].map((text, i) => /* @__PURE__ */ jsxs6(motion.div, { variants: itemFade, className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx9("div", { className: "mt-1 flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center", children: /* @__PURE__ */ jsx9(ArrowRight2, { className: "h-3 w-3 text-primary" }) }),
-                /* @__PURE__ */ jsx9("p", { className: "text-foreground", children: text })
-              ] }, i))
-            }
-          )
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-3xl mx-auto",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-12 text-center", children: "C\xF3mo funciona" }),
-          /* @__PURE__ */ jsx9("div", { className: "grid md:grid-cols-3 gap-8", children: [
-            { step: "01", text: "Postulas con un formulario breve." },
-            { step: "02", text: "Reviso tu caso y confirmo si encaja." },
-            { step: "03", text: "Agendamos la sesi\xF3n y trabajamos con foco en decisiones y plan." }
-          ].map((item, i) => /* @__PURE__ */ jsxs6(
-            motion.div,
-            {
-              initial: { opacity: 0, y: 20 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: { duration: 0.4, delay: i * 0.1 },
-              className: "text-center",
-              children: [
-                /* @__PURE__ */ jsx9("div", { className: "text-4xl font-bold text-primary/30 font-mono mb-4", children: item.step }),
-                /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground", children: item.text })
+                /* @__PURE__ */ jsx9("div", { className: "mt-1.5 flex-shrink-0 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center", children: /* @__PURE__ */ jsx9(Check, { className: "h-3 w-3 text-primary" }) }),
+                /* @__PURE__ */ jsx9("p", { className: "text-base md:text-lg text-foreground/90 leading-relaxed", children: text })
               ]
             },
             i
-          )) })
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
+          ))
+        }
+      )
+    ] }) }),
+    /* @__PURE__ */ jsx9("section", { className: "py-16 md:py-24 border-t border-border/30", children: /* @__PURE__ */ jsxs6("div", { className: "container max-w-5xl", children: [
+      /* @__PURE__ */ jsxs6(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: "-80px" },
+          transition: { duration: 0.6 },
+          children: [
+            /* @__PURE__ */ jsx9("p", { className: "text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4 text-center", children: "C\xF3mo trabajo" }),
+            /* @__PURE__ */ jsx9("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-16 text-center", children: "Tres pilares, un sistema." })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsx9("div", { className: "grid md:grid-cols-3 gap-8 md:gap-12", children: [
+        {
+          n: "01",
+          title: "Estrategia",
+          body: "Diagn\xF3stico, mercado, posicionamiento y plan. Qu\xE9 hacer, qu\xE9 dejar de hacer, en qu\xE9 orden."
+        },
+        {
+          n: "02",
+          title: "Gesti\xF3n",
+          body: "Coordinaci\xF3n de equipos internos y proveedores. Procesos, KPIs y rituales de ejecuci\xF3n."
+        },
+        {
+          n: "03",
+          title: "Ejecuci\xF3n",
+          body: "Campa\xF1as, contenido, automatizaci\xF3n e IA aplicada. Salir con algo cada semana, medir, iterar."
+        }
+      ].map((item, i) => /* @__PURE__ */ jsxs6(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: "-80px" },
+          transition: { duration: 0.5, delay: i * 0.1 },
+          children: [
+            /* @__PURE__ */ jsx9("div", { className: "font-display text-5xl md:text-6xl text-primary/30 mb-4", children: item.n }),
+            /* @__PURE__ */ jsx9("h3", { className: "font-display text-2xl md:text-3xl mb-3", children: item.title }),
+            /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: item.body })
+          ]
+        },
+        item.n
+      )) })
+    ] }) }),
+    /* @__PURE__ */ jsx9("section", { className: "py-16 md:py-24 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container max-w-3xl", children: /* @__PURE__ */ jsxs6(
       motion.div,
       {
-        initial: { opacity: 0, y: 30 },
+        initial: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-2xl mx-auto text-center",
+        viewport: { once: true, margin: "-80px" },
+        transition: { duration: 0.6 },
+        className: "text-center",
         children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-8", children: "Sobre Sebasti\xE1n Jara" }),
-          /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground text-lg leading-relaxed", children: "Founder & CEO @GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads y automatizaci\xF3n. Trabajo con empresas en LATAM y EE.UU. Mi enfoque es construir sistemas: atraer demanda, convertirla en ventas y ordenar la operaci\xF3n." }),
-          /* @__PURE__ */ jsx9("div", { className: "mt-6", children: /* @__PURE__ */ jsx9(Link3, { href: "/sobre-mi", className: "text-primary text-sm font-medium hover:underline", children: "M\xE1s sobre m\xED" }) })
-        ]
-      }
-    ) }) }),
-    /* @__PURE__ */ jsx9("section", { className: "py-20 border-t border-border/30", children: /* @__PURE__ */ jsx9("div", { className: "container", children: /* @__PURE__ */ jsxs6(
-      motion.div,
-      {
-        initial: { opacity: 0, y: 30 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true },
-        transition: { duration: 0.5 },
-        className: "max-w-2xl mx-auto text-center",
-        children: [
-          /* @__PURE__ */ jsx9("h2", { className: "text-2xl md:text-3xl font-semibold mb-8", children: "Si quieres orden y escalabilidad, postula." }),
-          /* @__PURE__ */ jsx9("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: /* @__PURE__ */ jsx9(Link3, { href: "/postular", children: /* @__PURE__ */ jsxs6(
-            Button,
+          /* @__PURE__ */ jsx9("p", { className: "text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4", children: "Qui\xE9n hay detr\xE1s" }),
+          /* @__PURE__ */ jsx9("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8", children: "15+ a\xF1os dise\xF1ando sistemas de crecimiento." }),
+          /* @__PURE__ */ jsxs6("p", { className: "text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto", children: [
+            "Founder & CEO de",
+            " ",
+            /* @__PURE__ */ jsx9(
+              "a",
+              {
+                href: "https://gopointagency.com",
+                target: "_blank",
+                rel: "noreferrer",
+                className: "text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary transition-colors",
+                children: "GoPoint Agency"
+              }
+            ),
+            ". He liderado marketing para empresas en LATAM y Estados Unidos \u2014 SEO, Ads, automatizaci\xF3n, IA aplicada y sistemas comerciales. Trabajo con pocos clientes a la vez para dar profundidad, no volumen."
+          ] }),
+          /* @__PURE__ */ jsx9("div", { className: "mt-8", children: /* @__PURE__ */ jsxs6(
+            Link3,
             {
-              size: "lg",
-              className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
+              href: "/sobre-mi",
+              className: "inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all",
               children: [
-                "Postular a la mentor\xEDa ",
-                /* @__PURE__ */ jsx9(ArrowRight2, { className: "ml-2 h-4 w-4" })
+                "Con\xF3ceme m\xE1s ",
+                /* @__PURE__ */ jsx9(ArrowRight3, { className: "h-4 w-4" })
               ]
             }
-          ) }) })
+          ) })
         ]
       }
-    ) }) })
+    ) }) }),
+    /* @__PURE__ */ jsxs6("section", { className: "py-16 md:py-28 border-t border-border/30 relative overflow-hidden", children: [
+      /* @__PURE__ */ jsx9(
+        "div",
+        {
+          "aria-hidden": "true",
+          className: "pointer-events-none absolute inset-0 -z-10",
+          style: {
+            background: "radial-gradient(circle at 50% 50%, oklch(0.65 0.22 40 / 0.12), transparent 60%)"
+          }
+        }
+      ),
+      /* @__PURE__ */ jsx9("div", { className: "container max-w-2xl", children: /* @__PURE__ */ jsxs6(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: "-80px" },
+          transition: { duration: 0.6 },
+          className: "text-center",
+          children: [
+            /* @__PURE__ */ jsx9("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "\xBFNecesitas un CMO?" }),
+            /* @__PURE__ */ jsx9("p", { className: "text-base md:text-lg text-muted-foreground mb-10 leading-relaxed", children: "Cu\xE9ntame sobre tu empresa y el momento en que est\xE1s. Revisar\xE9 si encaja y te respondo personalmente." }),
+            /* @__PURE__ */ jsx9(Link3, { href: "/postular", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
+              Button,
+              {
+                size: "lg",
+                className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto",
+                children: [
+                  "Trabajemos juntos ",
+                  /* @__PURE__ */ jsx9(ArrowRight3, { className: "ml-2 h-4 w-4" })
+                ]
+              }
+            ) })
+          ]
+        }
+      ) })
+    ] })
   ] });
 }
 
 // client/src/pages/About.tsx
 import { motion as motion2 } from "framer-motion";
 import { Link as Link4 } from "wouter";
-import { ArrowRight as ArrowRight3 } from "lucide-react";
+import { ArrowRight as ArrowRight4 } from "lucide-react";
 import { jsx as jsx10, jsxs as jsxs7 } from "react/jsx-runtime";
 function About() {
   const fadeIn = {
@@ -833,7 +992,7 @@ function About() {
               className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
               children: [
                 "Postular a la mentor\xEDa ",
-                /* @__PURE__ */ jsx10(ArrowRight3, { className: "ml-2 h-4 w-4" })
+                /* @__PURE__ */ jsx10(ArrowRight4, { className: "ml-2 h-4 w-4" })
               ]
             }
           ) }) })
@@ -846,7 +1005,7 @@ function About() {
 // client/src/pages/Mentoria.tsx
 import { motion as motion3 } from "framer-motion";
 import { Link as Link5 } from "wouter";
-import { ArrowRight as ArrowRight4, Check as Check2 } from "lucide-react";
+import { ArrowRight as ArrowRight5, Check as Check2 } from "lucide-react";
 import { jsx as jsx11, jsxs as jsxs8 } from "react/jsx-runtime";
 var stagger2 = {
   animate: { transition: { staggerChildren: 0.08 } }
@@ -1013,7 +1172,7 @@ function Mentoria() {
               className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
               children: [
                 "Postular a la mentor\xEDa ",
-                /* @__PURE__ */ jsx11(ArrowRight4, { className: "ml-2 h-4 w-4" })
+                /* @__PURE__ */ jsx11(ArrowRight5, { className: "ml-2 h-4 w-4" })
               ]
             }
           ) }) })
@@ -1025,7 +1184,7 @@ function Mentoria() {
 
 // client/src/pages/Postular.tsx
 import { motion as motion4 } from "framer-motion";
-import { ArrowRight as ArrowRight5 } from "lucide-react";
+import { ArrowRight as ArrowRight6 } from "lucide-react";
 import { useState as useState2 } from "react";
 import { jsx as jsx12, jsxs as jsxs9 } from "react/jsx-runtime";
 var TOOLS_OPTIONS = [
@@ -1065,7 +1224,7 @@ function Postular() {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5 }
   };
-  const inputClasses = "w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50";
+  const inputClasses = "w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 min-h-[48px]";
   const handleToolToggle = (tool) => {
     setFormData((prev) => ({
       ...prev,
@@ -1074,7 +1233,7 @@ function Postular() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mensaje = `Hola Seba, quiero postular a la Mentor\xEDa Ejecutiva 1 a 1.
+    const mensaje = `Hola Seba, quiero explorar trabajar contigo como CMO fraccionado.
 
 *Nombre:* ${formData.nombre}
 *Email:* ${formData.email}
@@ -1093,12 +1252,12 @@ function Postular() {
     /* @__PURE__ */ jsx12(
       SEO,
       {
-        title: "Postular a la Mentor\xEDa Ejecutiva 1 a 1 | Sebasti\xE1n Jara",
-        description: "Postula a la mentor\xEDa ejecutiva 1 a 1. Proceso selectivo para due\xF1os de empresa que buscan dise\xF1ar su sistema comercial y escalar con orden.",
-        keywords: ["postular mentor\xEDa", "mentor\xEDa ejecutiva", "consultor\xEDa 1 a 1", "postulaci\xF3n mentor\xEDa empresarial", "Sebasti\xE1n Jara"]
+        title: "Trabajemos juntos | Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+        description: "Cu\xE9ntame sobre tu empresa. Proceso de postulaci\xF3n breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo.",
+        keywords: ["CMO fraccionado", "contratar CMO", "fractional CMO", "direcci\xF3n de marketing", "Sebasti\xE1n Jara"]
       }
     ),
-    /* @__PURE__ */ jsx12("section", { className: "py-20 md:py-28", children: /* @__PURE__ */ jsx12("div", { className: "container", children: /* @__PURE__ */ jsxs9(
+    /* @__PURE__ */ jsx12("section", { className: "py-14 md:py-24", children: /* @__PURE__ */ jsx12("div", { className: "container", children: /* @__PURE__ */ jsxs9(
       motion4.div,
       {
         initial: "initial",
@@ -1106,9 +1265,10 @@ function Postular() {
         variants: fadeIn,
         className: "max-w-2xl mx-auto text-center",
         children: [
-          /* @__PURE__ */ jsx12("h1", { className: "text-3xl md:text-5xl font-display font-bold mb-6 leading-tight", children: "Postular a la mentor\xEDa" }),
-          /* @__PURE__ */ jsx12("p", { className: "text-lg text-muted-foreground mb-2", children: "Completa el formulario. Reviso cada caso personalmente." }),
-          /* @__PURE__ */ jsx12("p", { className: "text-sm text-muted-foreground", children: "Cupos limitados por agenda." })
+          /* @__PURE__ */ jsx12("p", { className: "text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5", children: "Trabajemos juntos" }),
+          /* @__PURE__ */ jsx12("h1", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "Cu\xE9ntame sobre tu empresa." }),
+          /* @__PURE__ */ jsx12("p", { className: "text-base md:text-lg text-muted-foreground mb-2", children: "Reviso cada caso personalmente y te respondo si encaja." }),
+          /* @__PURE__ */ jsx12("p", { className: "text-sm text-muted-foreground", children: "Trabajo con pocos clientes a la vez." })
         ]
       }
     ) }) }),
@@ -1233,7 +1393,7 @@ function Postular() {
               {
                 type: "button",
                 onClick: () => handleToolToggle(tool),
-                className: `px-4 py-2 rounded-full text-sm border transition-colors ${formData.herramientas.includes(tool) ? "bg-primary text-primary-foreground border-primary" : "bg-secondary/50 text-muted-foreground border-border hover:border-primary/50"}`,
+                className: `min-h-[44px] px-4 py-2 rounded-full text-sm border transition-colors ${formData.herramientas.includes(tool) ? "bg-primary text-primary-foreground border-primary" : "bg-secondary/50 text-muted-foreground border-border hover:border-primary/50"}`,
                 children: tool
               },
               tool
@@ -1261,7 +1421,7 @@ function Postular() {
               className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full w-full sm:w-auto",
               children: [
                 "Enviar postulaci\xF3n ",
-                /* @__PURE__ */ jsx12(ArrowRight5, { className: "ml-2 h-4 w-4" })
+                /* @__PURE__ */ jsx12(ArrowRight6, { className: "ml-2 h-4 w-4" })
               ]
             }
           ) })
@@ -1274,7 +1434,7 @@ function Postular() {
 // client/src/pages/FAQ.tsx
 import { motion as motion5 } from "framer-motion";
 import { Link as Link6 } from "wouter";
-import { ArrowRight as ArrowRight6 } from "lucide-react";
+import { ArrowRight as ArrowRight7 } from "lucide-react";
 import { jsx as jsx13, jsxs as jsxs10 } from "react/jsx-runtime";
 var faqs = [
   {
@@ -1451,7 +1611,7 @@ function FAQ() {
               className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full",
               children: [
                 "Postular a la mentor\xEDa ",
-                /* @__PURE__ */ jsx13(ArrowRight6, { className: "ml-2 h-4 w-4" })
+                /* @__PURE__ */ jsx13(ArrowRight7, { className: "ml-2 h-4 w-4" })
               ]
             }
           ) })
@@ -1507,8 +1667,8 @@ import path from "path";
 var BASE_URL = "https://sebastianjara.com";
 var routeMeta = {
   "/": {
-    title: "Mentor\xEDa Ejecutiva 1 a 1 | Sebasti\xE1n Jara",
-    description: "Mentor\xEDa ejecutiva 1 a 1 para due\xF1os de empresa: dise\xF1a tu sistema comercial, automatizaci\xF3n y roadmap para escalar con orden y datos.",
+    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+    description: "Sebasti\xE1n Jara: CMO fraccionado para empresas que necesitan direcci\xF3n de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`
   },
   "/mentoria": {

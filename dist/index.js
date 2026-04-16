@@ -664,8 +664,8 @@ function wwwRedirect(req, res, next) {
 }
 var routeMeta = {
   "/": {
-    title: "Mentor\xEDa Ejecutiva 1 a 1 | Sebasti\xE1n Jara",
-    description: "Mentor\xEDa ejecutiva 1 a 1 para due\xF1os de empresa: dise\xF1a tu sistema comercial, automatizaci\xF3n y roadmap para escalar con orden y datos.",
+    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+    description: "Sebasti\xE1n Jara: CMO fraccionado para empresas que necesitan direcci\xF3n de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`
   },
   "/mentoria": {
@@ -783,6 +783,7 @@ function serveStatic(app) {
     );
   }
   app.use(express.static(distPath, {
+    index: false,
     maxAge: "1y",
     immutable: true,
     setHeaders(res, filePath) {
