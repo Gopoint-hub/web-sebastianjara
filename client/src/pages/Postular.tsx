@@ -84,7 +84,7 @@ export default function Postular() {
     <Layout>
       <SEO
         title="Trabajemos juntos | Sebastián Jara, CMO Fraccionado"
-        description="Cuéntame sobre tu empresa. Proceso de postulación breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo."
+        description="Cuéntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo."
         keywords={["CMO fraccionado", "contratar CMO", "fractional CMO", "dirección de marketing", "Sebastián Jara"]}
       />
 

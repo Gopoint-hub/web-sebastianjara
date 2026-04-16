@@ -262,7 +262,7 @@ export default function Mentoria() {
             {[
               {
                 step: "01",
-                title: "Postulación y fit",
+                title: "Primer contacto y fit",
                 desc:
                   "Completas un formulario con tu empresa, momento y desafío. Reviso cada caso personalmente y te respondo si encaja para trabajar juntos.",
               },

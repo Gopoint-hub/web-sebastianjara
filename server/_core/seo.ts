@@ -89,7 +89,7 @@ const routeMeta: Record<string, RouteMeta> = {
   "/preguntas": {
     title: "Preguntas frecuentes | Sebastián Jara, CMO Fraccionado con IA",
     description:
-      "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qué es, para quién, cómo trabajo y cómo postular.",
+      "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qué es, para quién, cómo trabajo y cómo contactarme.",
     canonical: `${BASE_URL}/preguntas`,
   },
 };

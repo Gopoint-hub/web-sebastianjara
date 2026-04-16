@@ -58,10 +58,10 @@ const faqs = [
     items: [
       {
         q: "¿Cómo funciona el proceso para trabajar juntos?",
-        a: "Cuatro pasos: (1) Postulas con un formulario breve. (2) Reviso tu caso personalmente y confirmo fit. (3) Hablamos por video para alinear alcance y expectativas. (4) Entro en la operación: audito en las primeras semanas y empiezo a dirigir.",
+        a: "Cuatro pasos: (1) Me escribes por el formulario breve. (2) Reviso tu caso personalmente y confirmo fit. (3) Hablamos por video para alinear alcance y expectativas. (4) Entro en la operación: audito en las primeras semanas y empiezo a dirigir.",
       },
       {
-        q: "¿Por qué hay un proceso de postulación?",
+        q: "¿Por qué hay un proceso previo?",
         a: "Porque trabajo con pocos clientes a la vez. Prefiero profundidad sobre volumen. El formulario me permite evaluar si encaja con tu momento y si voy a poder entregar el valor que justifique el costo.",
       },
       {
@@ -73,7 +73,7 @@ const faqs = [
         a: "Depende del caso, pero rara vez funciona en menos de 3 meses. El primer mes es diagnóstico y plan; desde ahí la dirección se mide en trimestres. Lo conversamos en la llamada de alineación.",
       },
       {
-        q: "¿Cómo postulo?",
+        q: "¿Cómo te contacto?",
         a: "Completa el formulario en sebastianjara.com/trabajemos con tu nombre, empresa, rol, facturación mensual aproximada, principal desafío y objetivo en 90 días.",
       },
     ],
@@ -121,11 +121,11 @@ export default function FAQ() {
     <Layout>
       <SEO
         title="Preguntas frecuentes | Sebastián Jara, CMO Fraccionado con IA"
-        description="Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebastián Jara: qué es, para quién, cómo trabaja y cómo postular."
+        description="Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebastián Jara: qué es, para quién, cómo trabaja y cómo contactarlo."
         keywords={[
           "preguntas frecuentes CMO fraccionado",
           "FAQ consultor de IA y marketing",
-          "cómo postular Sebastián Jara",
+          "cómo contactar a Sebastián Jara",
           "CMO fraccionado Chile",
           "consultoría marketing LATAM",
         ]}
@@ -146,7 +146,7 @@ export default function FAQ() {
               Preguntas frecuentes
             </p>
             <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
-              Las respuestas que casi todos me hacen antes de postular.
+              Las preguntas que casi todos me hacen antes de trabajar juntos.
             </h1>
             <p className="text-base md:text-lg text-muted-foreground">
               Todo lo que necesitas saber sobre el servicio de CMO
@@ -208,7 +208,7 @@ export default function FAQ() {
               ¿Tienes más preguntas?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Postula y me cuentas tu caso directamente.
+              Escríbeme y te respondo yo directamente.
             </p>
             <Link href="/trabajemos" className="inline-block w-full sm:w-auto">
               <Button

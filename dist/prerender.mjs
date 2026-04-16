@@ -1235,7 +1235,7 @@ function Mentoria() {
       /* @__PURE__ */ jsx11("div", { className: "space-y-10", children: [
         {
           step: "01",
-          title: "Postulaci\xF3n y fit",
+          title: "Primer contacto y fit",
           desc: "Completas un formulario con tu empresa, momento y desaf\xEDo. Reviso cada caso personalmente y te respondo si encaja para trabajar juntos."
         },
         {
@@ -1372,7 +1372,7 @@ function Postular() {
       SEO,
       {
         title: "Trabajemos juntos | Sebasti\xE1n Jara, CMO Fraccionado",
-        description: "Cu\xE9ntame sobre tu empresa. Proceso de postulaci\xF3n breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo.",
+        description: "Cu\xE9ntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo.",
         keywords: ["CMO fraccionado", "contratar CMO", "fractional CMO", "direcci\xF3n de marketing", "Sebasti\xE1n Jara"]
       }
     ),
@@ -1607,10 +1607,10 @@ var faqs = [
     items: [
       {
         q: "\xBFC\xF3mo funciona el proceso para trabajar juntos?",
-        a: "Cuatro pasos: (1) Postulas con un formulario breve. (2) Reviso tu caso personalmente y confirmo fit. (3) Hablamos por video para alinear alcance y expectativas. (4) Entro en la operaci\xF3n: audito en las primeras semanas y empiezo a dirigir."
+        a: "Cuatro pasos: (1) Me escribes por el formulario breve. (2) Reviso tu caso personalmente y confirmo fit. (3) Hablamos por video para alinear alcance y expectativas. (4) Entro en la operaci\xF3n: audito en las primeras semanas y empiezo a dirigir."
       },
       {
-        q: "\xBFPor qu\xE9 hay un proceso de postulaci\xF3n?",
+        q: "\xBFPor qu\xE9 hay un proceso previo?",
         a: "Porque trabajo con pocos clientes a la vez. Prefiero profundidad sobre volumen. El formulario me permite evaluar si encaja con tu momento y si voy a poder entregar el valor que justifique el costo."
       },
       {
@@ -1622,7 +1622,7 @@ var faqs = [
         a: "Depende del caso, pero rara vez funciona en menos de 3 meses. El primer mes es diagn\xF3stico y plan; desde ah\xED la direcci\xF3n se mide en trimestres. Lo conversamos en la llamada de alineaci\xF3n."
       },
       {
-        q: "\xBFC\xF3mo postulo?",
+        q: "\xBFC\xF3mo te contacto?",
         a: "Completa el formulario en sebastianjara.com/trabajemos con tu nombre, empresa, rol, facturaci\xF3n mensual aproximada, principal desaf\xEDo y objetivo en 90 d\xEDas."
       }
     ]
@@ -1669,11 +1669,11 @@ function FAQ() {
       SEO,
       {
         title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
-        description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebasti\xE1n Jara: qu\xE9 es, para qui\xE9n, c\xF3mo trabaja y c\xF3mo postular.",
+        description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebasti\xE1n Jara: qu\xE9 es, para qui\xE9n, c\xF3mo trabaja y c\xF3mo contactarlo.",
         keywords: [
           "preguntas frecuentes CMO fraccionado",
           "FAQ consultor de IA y marketing",
-          "c\xF3mo postular Sebasti\xE1n Jara",
+          "c\xF3mo contactar a Sebasti\xE1n Jara",
           "CMO fraccionado Chile",
           "consultor\xEDa marketing LATAM"
         ],
@@ -1690,7 +1690,7 @@ function FAQ() {
         className: "max-w-3xl",
         children: [
           /* @__PURE__ */ jsx13("p", { className: "text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5", children: "Preguntas frecuentes" }),
-          /* @__PURE__ */ jsx13("h1", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "Las respuestas que casi todos me hacen antes de postular." }),
+          /* @__PURE__ */ jsx13("h1", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "Las preguntas que casi todos me hacen antes de trabajar juntos." }),
           /* @__PURE__ */ jsx13("p", { className: "text-base md:text-lg text-muted-foreground", children: "Todo lo que necesitas saber sobre el servicio de CMO fraccionado con IA aplicada y c\xF3mo trabajar conmigo." })
         ]
       }
@@ -1733,7 +1733,7 @@ function FAQ() {
         className: "max-w-2xl mx-auto text-center",
         children: [
           /* @__PURE__ */ jsx13("h2", { className: "font-display text-2xl md:text-4xl leading-tight mb-4", children: "\xBFTienes m\xE1s preguntas?" }),
-          /* @__PURE__ */ jsx13("p", { className: "text-muted-foreground mb-8", children: "Postula y me cuentas tu caso directamente." }),
+          /* @__PURE__ */ jsx13("p", { className: "text-muted-foreground mb-8", children: "Escr\xEDbeme y te respondo yo directamente." }),
           /* @__PURE__ */ jsx13(Link6, { href: "/trabajemos", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs10(
             Button,
             {
@@ -1819,7 +1819,7 @@ var routeMeta = {
   },
   "/preguntas": {
     title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
-    description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo postular.",
+    description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo contactarme.",
     canonical: `${BASE_URL}/preguntas`
   }
 };

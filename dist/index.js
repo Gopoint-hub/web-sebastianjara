@@ -688,7 +688,7 @@ var routeMeta = {
   },
   "/preguntas": {
     title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
-    description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo postular.",
+    description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo contactarme.",
     canonical: `${BASE_URL}/preguntas`
   }
 };
