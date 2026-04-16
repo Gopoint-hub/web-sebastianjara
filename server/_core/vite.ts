@@ -60,6 +60,7 @@ export function serveStatic(app: Express) {
   }
 
   app.use(express.static(distPath, {
+    index: false,
     maxAge: "1y",
     immutable: true,
     setHeaders(res, filePath) {

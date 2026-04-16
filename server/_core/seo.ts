@@ -60,9 +60,9 @@ interface RouteMeta {
 
 const routeMeta: Record<string, RouteMeta> = {
   "/": {
-    title: "Mentoría Ejecutiva 1 a 1 | Sebastián Jara",
+    title: "Sebastián Jara — CMO Fraccionado",
     description:
-      "Mentoría ejecutiva 1 a 1 para dueños de empresa: diseña tu sistema comercial, automatización y roadmap para escalar con orden y datos.",
+      "Sebastián Jara: CMO fraccionado para empresas que necesitan dirección de marketing senior sin contratar un equipo completo. Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`,
   },
   "/mentoria": {

@@ -49,7 +49,7 @@ export default function Postular() {
   };
 
   const inputClasses =
-    "w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50";
+    "w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 min-h-[48px]";
 
   const handleToolToggle = (tool: string) => {
     setFormData((prev) => ({
@@ -63,7 +63,7 @@ export default function Postular() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const mensaje = `Hola Seba, quiero postular a la Mentoría Ejecutiva 1 a 1.
+    const mensaje = `Hola Seba, quiero explorar trabajar contigo como CMO fraccionado.
 
 *Nombre:* ${formData.nombre}
 *Email:* ${formData.email}
@@ -83,13 +83,13 @@ export default function Postular() {
   return (
     <Layout>
       <SEO
-        title="Postular a la Mentoría Ejecutiva 1 a 1 | Sebastián Jara"
-        description="Postula a la mentoría ejecutiva 1 a 1. Proceso selectivo para dueños de empresa que buscan diseñar su sistema comercial y escalar con orden."
-        keywords={["postular mentoría", "mentoría ejecutiva", "consultoría 1 a 1", "postulación mentoría empresarial", "Sebastián Jara"]}
+        title="Trabajemos juntos | Sebastián Jara — CMO Fraccionado"
+        description="Cuéntame sobre tu empresa. Proceso de postulación breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo."
+        keywords={["CMO fraccionado", "contratar CMO", "fractional CMO", "dirección de marketing", "Sebastián Jara"]}
       />
 
       {/* Hero */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-24">
         <div className="container">
           <motion.div
             initial="initial"
@@ -97,14 +97,17 @@ export default function Postular() {
             variants={fadeIn}
             className="max-w-2xl mx-auto text-center"
           >
-            <h1 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">
-              Postular a la mentoría
+            <p className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5">
+              Trabajemos juntos
+            </p>
+            <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+              Cuéntame sobre tu empresa.
             </h1>
-            <p className="text-lg text-muted-foreground mb-2">
-              Completa el formulario. Reviso cada caso personalmente.
+            <p className="text-base md:text-lg text-muted-foreground mb-2">
+              Reviso cada caso personalmente y te respondo si encaja.
             </p>
             <p className="text-sm text-muted-foreground">
-              Cupos limitados por agenda.
+              Trabajo con pocos clientes a la vez.
             </p>
           </motion.div>
         </div>
@@ -235,7 +238,7 @@ export default function Postular() {
                         key={tool}
                         type="button"
                         onClick={() => handleToolToggle(tool)}
-                        className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                        className={`min-h-[44px] px-4 py-2 rounded-full text-sm border transition-colors ${
                           formData.herramientas.includes(tool)
                             ? "bg-primary text-primary-foreground border-primary"
                             : "bg-secondary/50 text-muted-foreground border-border hover:border-primary/50"
