@@ -608,7 +608,7 @@ function Home2() {
                 /* @__PURE__ */ jsx9("span", { className: "h-px w-6 bg-primary" }),
                 "CMO Fraccionado"
               ] }),
-              /* @__PURE__ */ jsxs6("h1", { className: "font-logo uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6", children: [
+              /* @__PURE__ */ jsxs6("h1", { className: "font-display font-semibold uppercase leading-[0.9] tracking-[0.005em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6", children: [
                 "Sebasti\xE1n",
                 /* @__PURE__ */ jsx9("br", {}),
                 /* @__PURE__ */ jsx9("span", { className: "text-primary", children: "Jara" })

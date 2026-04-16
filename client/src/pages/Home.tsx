@@ -64,7 +64,7 @@ export default function Home() {
                 CMO Fraccionado
               </p>
 
-              <h1 className="font-logo uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6">
+              <h1 className="font-display font-semibold uppercase leading-[0.9] tracking-[0.005em] text-[clamp(2.75rem,10vw,6.75rem)] mb-6">
                 Sebastián
                 <br />
                 <span className="text-primary">Jara</span>
