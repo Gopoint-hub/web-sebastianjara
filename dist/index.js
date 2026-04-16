@@ -636,7 +636,9 @@ var vite_config_default = defineConfig({
 // server/_core/seo.ts
 var BASE_URL = "https://sebastianjara.com";
 var redirectMap = {
-  "/contacto": "/postular",
+  "/contacto": "/trabajemos",
+  "/postular": "/trabajemos",
+  "/faq": "/preguntas",
   "/blog": "/",
   "/blog/ai-agency-lo-nuevo-para-el-2025/": "/",
   "/consultor-de-marketing-digital": "/",
@@ -664,30 +666,30 @@ function wwwRedirect(req, res, next) {
 }
 var routeMeta = {
   "/": {
-    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA aplicada",
+    title: "Sebasti\xE1n Jara, CMO Fraccionado con IA aplicada",
     description: "Direcci\xF3n de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`
   },
   "/mentoria": {
-    title: "C\xF3mo trabajo \u2014 CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
+    title: "C\xF3mo trabajo, CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
     description: "C\xF3mo opero como CMO fraccionado: estrategia, gesti\xF3n e IA aplicada. Me integro a tu empresa como direcci\xF3n de marketing senior, sin contratar un equipo completo.",
     canonical: `${BASE_URL}/mentoria`
   },
   "/sobre-mi": {
-    title: "Sobre Sebasti\xE1n Jara \u2014 Consultor de IA & Marketing, CMO Fraccionado",
+    title: "Sobre Sebasti\xE1n Jara, Consultor de IA & Marketing, CMO Fraccionado",
     description: "Founder & CEO de GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads, automatizaci\xF3n e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU.",
     canonical: `${BASE_URL}/sobre-mi`,
     ogType: "profile"
   },
-  "/postular": {
-    title: "Trabajemos juntos | Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+  "/trabajemos": {
+    title: "Trabajemos juntos | Sebasti\xE1n Jara, CMO Fraccionado",
     description: "Cu\xE9ntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado con IA aplicada encaja con tu momento y equipo.",
-    canonical: `${BASE_URL}/postular`
+    canonical: `${BASE_URL}/trabajemos`
   },
-  "/faq": {
-    title: "Preguntas frecuentes | Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA",
+  "/preguntas": {
+    title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
     description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo postular.",
-    canonical: `${BASE_URL}/faq`
+    canonical: `${BASE_URL}/preguntas`
   }
 };
 function injectSeoMeta(html, url) {

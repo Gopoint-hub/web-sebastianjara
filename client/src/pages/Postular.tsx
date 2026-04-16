@@ -83,7 +83,7 @@ export default function Postular() {
   return (
     <Layout>
       <SEO
-        title="Trabajemos juntos | Sebastián Jara — CMO Fraccionado"
+        title="Trabajemos juntos | Sebastián Jara, CMO Fraccionado"
         description="Cuéntame sobre tu empresa. Proceso de postulación breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo."
         keywords={["CMO fraccionado", "contratar CMO", "fractional CMO", "dirección de marketing", "Sebastián Jara"]}
       />
@@ -125,9 +125,10 @@ export default function Postular() {
           >
             {submitted ? (
               <div className="glass-panel rounded-xl p-10 text-center">
-                <h2 className="text-2xl font-semibold mb-4">Postulación enviada</h2>
+                <h2 className="text-2xl font-semibold mb-4">Mensaje enviado</h2>
                 <p className="text-muted-foreground">
-                  Recibí tu postulación. Te responderé a la brevedad.
+                  Se abrió WhatsApp con tu mensaje. Si no lo enviaste, vuelve
+                  y reenvíalo, reviso cada caso personalmente.
                 </p>
               </div>
             ) : (
@@ -270,7 +271,7 @@ export default function Postular() {
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full w-full sm:w-auto"
                   >
-                    Enviar postulación <ArrowRight className="ml-2 h-4 w-4" />
+                    Hablemos por WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </form>

@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: "Inicio", href: "/" },
     { label: "Cómo trabajo", href: "/mentoria" },
     { label: "Sobre mí", href: "/sobre-mi" },
-    { label: "FAQ", href: "/faq" },
+    { label: "Preguntas", href: "/preguntas" },
   ];
 
   // Lock body scroll while the mobile menu is open
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
-      {/* Skip to content — accessibility + SEO */}
+      {/* Skip to content, accessibility + SEO */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-sm focus:font-medium"
@@ -56,7 +56,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link
             href="/"
             className="flex items-center hover:opacity-80 transition-opacity -ml-1 px-1 py-2"
-            aria-label="Sebastián Jara — Inicio"
+            aria-label="Sebastián Jara, Inicio"
           >
             <img
               src="/images/logo-dark.webp"
@@ -84,7 +84,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
 
-            <Link href="/postular">
+            <Link href="/trabajemos">
               <Button
                 size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-full px-5 h-10"
@@ -94,7 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </nav>
 
-          {/* Mobile Menu Toggle — min 44px touch target */}
+          {/* Mobile Menu Toggle, min 44px touch target */}
           <button
             type="button"
             onClick={() => setIsMenuOpen((v) => !v)}
@@ -144,7 +144,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="px-6 pb-8 pt-4 border-t border-border/50">
-            <Link href="/postular" className="block">
+            <Link href="/trabajemos" className="block">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 text-base rounded-full w-full"

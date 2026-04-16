@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <Layout>
       <SEO
-        title="Sebastián Jara — CMO Fraccionado con IA aplicada"
+        title="Sebastián Jara, CMO Fraccionado con IA aplicada"
         description="Dirección de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU."
         keywords={[
           "CMO fraccionado",
@@ -39,7 +39,7 @@ export default function Home() {
         ]}
       />
 
-      {/* HERO — Marca personal */}
+      {/* HERO, Marca personal */}
       <section className="relative overflow-hidden">
         {/* Ambient gradient */}
         <div
@@ -79,7 +79,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/postular" className="w-full sm:w-auto">
+                <Link href="/trabajemos" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full w-full sm:w-auto"
@@ -99,7 +99,7 @@ export default function Home() {
               </div>
 
               <p className="text-xs text-muted-foreground mt-6">
-                Chile · LATAM · EE.UU. — Trabajo con pocos clientes a la vez.
+                Chile · LATAM · EE.UU., Trabajo con pocos clientes a la vez.
               </p>
             </motion.div>
 
@@ -149,7 +149,7 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed">
                 No soy agencia. No soy freelance. No soy consultor de un
                 workshop. Asumo la dirección de tu marketing como parte de
-                tu organización — con la experiencia de un CMO senior y la
+                tu organización, con la experiencia de un CMO senior y la
                 IA como palanca real de ejecución, por una fracción del costo
                 de contratar un equipo completo.
               </p>
@@ -235,7 +235,7 @@ export default function Home() {
                 n: "01",
                 title: "Estrategia",
                 body:
-                  "Diagnóstico, mercado, posicionamiento y plan. Qué hacer, qué dejar de hacer, en qué orden — y dónde la IA aporta ventaja.",
+                  "Diagnóstico, mercado, posicionamiento y plan. Qué hacer, qué dejar de hacer, en qué orden, y dónde la IA aporta ventaja.",
               },
               {
                 n: "02",
@@ -247,7 +247,7 @@ export default function Home() {
                 n: "03",
                 title: "IA aplicada",
                 body:
-                  "Contenido, automatización, agentes y análisis con IA — aplicada donde mueve la aguja real, no por moda. Velocidad sin perder criterio.",
+                  "Contenido, automatización, agentes y análisis con IA, aplicada donde mueve la aguja real, no por moda. Velocidad sin perder criterio.",
               },
             ].map((item, i) => (
               <motion.div
@@ -272,7 +272,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOBRE MÍ — brief */}
+      {/* SOBRE MÍ, brief */}
       <section className="py-16 md:py-24 border-t border-border/30">
         <div className="container max-w-3xl">
           <motion.div
@@ -299,7 +299,7 @@ export default function Home() {
                 GoPoint Agency
               </a>
               . He liderado marketing para empresas en LATAM y Estados
-              Unidos — SEO, Ads, sistemas comerciales, automatización y
+              Unidos, SEO, Ads, sistemas comerciales, automatización y
               agentes con IA. Trabajo con pocos clientes a la vez para dar
               profundidad, no volumen.
             </p>
@@ -340,7 +340,7 @@ export default function Home() {
               Cuéntame sobre tu empresa y el momento en que estás.
               Reviso si encaja y te respondo personalmente.
             </p>
-            <Link href="/postular" className="inline-block w-full sm:w-auto">
+            <Link href="/trabajemos" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"

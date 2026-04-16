@@ -19,10 +19,10 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/mentoria"} component={Mentoria} />
         <Route path={"/sobre-mi"} component={About} />
-        <Route path={"/postular"} component={Postular} />
-        <Route path={"/faq"} component={FAQ} />
+        <Route path={"/trabajemos"} component={Postular} />
+        <Route path={"/preguntas"} component={FAQ} />
         {/* Redirects from old routes */}
-        <Route path={"/aplicar"}>{() => <Redirect to="/postular" />}</Route>
+        <Route path={"/aplicar"}>{() => <Redirect to="/trabajemos" />}</Route>
         <Route path={"/metodo"}>{() => <Redirect to="/mentoria" />}</Route>
         <Route path={"/con-quien-trabajo"}>{() => <Redirect to="/" />}</Route>
         <Route path={"/404"} component={NotFound} />

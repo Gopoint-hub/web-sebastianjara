@@ -3,10 +3,10 @@ import StructuredData from "./StructuredData";
 
 const ROUTE_LABELS: Record<string, string> = {
   "/": "Inicio",
-  "/mentoria": "Mentoría",
+  "/mentoria": "Cómo trabajo",
   "/sobre-mi": "Sobre mí",
-  "/postular": "Postular",
-  "/faq": "Preguntas frecuentes",
+  "/trabajemos": "Trabajemos",
+  "/preguntas": "Preguntas frecuentes",
 };
 
 export default function Breadcrumbs() {

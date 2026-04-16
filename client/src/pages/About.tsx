@@ -15,7 +15,7 @@ export default function About() {
   return (
     <Layout>
       <SEO
-        title="Sobre Sebastián Jara — Consultor de IA & Marketing, CMO Fraccionado"
+        title="Sobre Sebastián Jara, Consultor de IA & Marketing, CMO Fraccionado"
         description="Founder & CEO de GoPoint. 15+ años en marketing digital, SEO, Ads, automatización e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU."
         keywords={[
           "Sebastián Jara",
@@ -42,7 +42,7 @@ export default function About() {
               <div className="relative max-w-md mx-auto md:mx-0 md:ml-auto">
                 <img
                   src="/images/sebastian-jara.webp"
-                  alt="Sebastián Jara — CMO Fraccionado y consultor de IA & Marketing"
+                  alt="Sebastián Jara, CMO Fraccionado y consultor de IA & Marketing"
                   className="w-full rounded-2xl"
                   width="1068"
                   height="1346"
@@ -67,7 +67,7 @@ export default function About() {
               <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Founder &amp; CEO de GoPoint. 15+ años liderando marketing
-                  digital para empresas en LATAM y Estados Unidos — SEO,
+                  digital para empresas en LATAM y Estados Unidos, SEO,
                   Ads, sistemas comerciales, automatización y agentes con
                   IA.
                 </p>
@@ -108,20 +108,20 @@ export default function About() {
               <div className="border-l-2 border-primary/40 pl-6">
                 <h3 className="font-semibold">GoPoint Agency</h3>
                 <p className="text-sm text-muted-foreground">
-                  Founder &amp; CEO — Agencia de marketing digital,
+                  Founder &amp; CEO, Agencia de marketing digital,
                   automatización e IA aplicada.
                 </p>
               </div>
               <div className="border-l-2 border-border/50 pl-6">
                 <h3 className="font-semibold">FrutillarHoy</h3>
                 <p className="text-sm text-muted-foreground">
-                  Director — Portal de contenido local.
+                  Director, Portal de contenido local.
                 </p>
               </div>
               <div className="border-l-2 border-border/50 pl-6">
                 <h3 className="font-semibold">MarketingHoy.com</h3>
                 <p className="text-sm text-muted-foreground">
-                  Director — Medio de marketing digital en español.
+                  Director, Medio de marketing digital en español.
                 </p>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function About() {
             <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8">
               Si quieres trabajar conmigo, conversemos.
             </h2>
-            <Link href="/postular" className="inline-block w-full sm:w-auto">
+            <Link href="/trabajemos" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"

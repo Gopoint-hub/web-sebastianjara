@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import { injectSeoMeta } from "../server/_core/seo";
 
-const routes = ["/", "/mentoria", "/sobre-mi", "/postular", "/faq"];
+const routes = ["/", "/mentoria", "/sobre-mi", "/trabajemos", "/preguntas"];
 
 const distPath = path.resolve("dist/public");
 const outDir = path.resolve(distPath, "_prerendered");
@@ -35,7 +35,7 @@ for (const route of routes) {
     success++;
     console.log(`  ✓ ${route} → _prerendered/${routeName}.html`);
   } catch (e: any) {
-    console.warn(`  ✗ ${route} — ${e.message}`);
+    console.warn(`  ✗ ${route}, ${e.message}`);
   }
 }
 

@@ -12,11 +12,11 @@ const faqs = [
     items: [
       {
         q: "¿Qué es un CMO fraccionado?",
-        a: "Un CMO fraccionado es un director de marketing senior que se integra a tu empresa a tiempo parcial. Toma las decisiones, dirige al equipo y coordina a los proveedores — igual que un CMO interno — pero por una fracción del costo de contratar uno full-time. Es el formato que uso con mis clientes.",
+        a: "Un CMO fraccionado es un director de marketing senior que se integra a tu empresa a tiempo parcial. Toma las decisiones, dirige al equipo y coordina a los proveedores, igual que un CMO interno, pero por una fracción del costo de contratar uno full-time. Es el formato que uso con mis clientes.",
       },
       {
         q: "¿Y qué es eso de 'consultor de IA & Marketing'?",
-        a: "Es cómo me describo profesionalmente: opero como CMO fraccionado y mi diferencial es aplicar IA al marketing donde entrega ventaja real — automatización, agentes, contenido, análisis. No uso IA por moda; la uso cuando mueve la aguja.",
+        a: "Es cómo me describo profesionalmente: opero como CMO fraccionado y mi diferencial es aplicar IA al marketing donde entrega ventaja real, automatización, agentes, contenido, análisis. No uso IA por moda; la uso cuando mueve la aguja.",
       },
       {
         q: "¿En qué se diferencia de una agencia?",
@@ -24,11 +24,11 @@ const faqs = [
       },
       {
         q: "¿En qué se diferencia de un consultor tradicional?",
-        a: "Un consultor entrega un informe y se va. Yo me sumo a la operación diaria — decido, dirijo, mido y ajusto semana a semana. Me hago cargo del resultado, no solo del diagnóstico.",
+        a: "Un consultor entrega un informe y se va. Yo me sumo a la operación diaria, decido, dirijo, mido y ajusto semana a semana. Me hago cargo del resultado, no solo del diagnóstico.",
       },
       {
         q: "¿Cómo usas la IA en marketing?",
-        a: "Donde tiene impacto real: automatización de workflows, generación y curaduría de contenido, agentes para atención y cotización, análisis y segmentación, personalización de campañas. Nunca como sustituto del criterio estratégico — como multiplicador de velocidad y escala.",
+        a: "Donde tiene impacto real: automatización de workflows, generación y curaduría de contenido, agentes para atención y cotización, análisis y segmentación, personalización de campañas. Nunca como sustituto del criterio estratégico, como multiplicador de velocidad y escala.",
       },
     ],
   },
@@ -37,7 +37,7 @@ const faqs = [
     items: [
       {
         q: "¿Para quién es este servicio?",
-        a: "Para dueños, CEOs o socios de empresas que ya facturan y necesitan dirección de marketing senior — pero todavía no justifican contratar un CMO full-time, o prefieren ganar velocidad trayendo a alguien con experiencia y criterio de IA desde adentro.",
+        a: "Para dueños, CEOs o socios de empresas que ya facturan y necesitan dirección de marketing senior, pero todavía no justifican contratar un CMO full-time, o prefieren ganar velocidad trayendo a alguien con experiencia y criterio de IA desde adentro.",
       },
       {
         q: "¿Para quién NO es?",
@@ -74,7 +74,7 @@ const faqs = [
       },
       {
         q: "¿Cómo postulo?",
-        a: "Completa el formulario en sebastianjara.com/postular con tu nombre, empresa, rol, facturación mensual aproximada, principal desafío y objetivo en 90 días.",
+        a: "Completa el formulario en sebastianjara.com/trabajemos con tu nombre, empresa, rol, facturación mensual aproximada, principal desafío y objetivo en 90 días.",
       },
     ],
   },
@@ -120,7 +120,7 @@ export default function FAQ() {
   return (
     <Layout>
       <SEO
-        title="Preguntas frecuentes | Sebastián Jara — CMO Fraccionado con IA"
+        title="Preguntas frecuentes | Sebastián Jara, CMO Fraccionado con IA"
         description="Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebastián Jara: qué es, para quién, cómo trabaja y cómo postular."
         keywords={[
           "preguntas frecuentes CMO fraccionado",
@@ -129,7 +129,7 @@ export default function FAQ() {
           "CMO fraccionado Chile",
           "consultoría marketing LATAM",
         ]}
-        canonical="https://sebastianjara.com/faq"
+        canonical="https://sebastianjara.com/preguntas"
       />
       <StructuredData data={FAQ_SCHEMA} />
 
@@ -210,7 +210,7 @@ export default function FAQ() {
             <p className="text-muted-foreground mb-8">
               Postula y me cuentas tu caso directamente.
             </p>
-            <Link href="/postular" className="inline-block w-full sm:w-auto">
+            <Link href="/trabajemos" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"

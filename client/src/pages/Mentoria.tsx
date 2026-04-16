@@ -18,7 +18,7 @@ export default function Mentoria() {
   return (
     <Layout>
       <SEO
-        title="Cómo trabajo — CMO Fraccionado con IA aplicada | Sebastián Jara"
+        title="Cómo trabajo, CMO Fraccionado con IA aplicada | Sebastián Jara"
         description="Cómo opero como CMO fraccionado: dirección de marketing senior con IA aplicada, integrado a tu equipo. Estrategia, gestión y ejecución desde adentro de tu empresa."
         keywords={[
           "cómo trabaja CMO fraccionado",
@@ -49,7 +49,7 @@ export default function Mentoria() {
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3">
               No entrego un informe y me voy. Me sumo al equipo, defino
-              rumbo, priorizo y hago que las cosas salgan — con la IA como
+              rumbo, priorizo y hago que las cosas salgan, con la IA como
               palanca de ejecución donde aporta valor real.
             </p>
             <p className="text-sm text-muted-foreground">
@@ -82,7 +82,7 @@ export default function Mentoria() {
                 n: "01",
                 title: "Estrategia",
                 body:
-                  "Diagnóstico del estado actual, mercado y competencia. Posicionamiento, propuesta de valor y plan comercial. Qué hacer, qué dejar de hacer, en qué orden — y dónde la IA entrega ventaja.",
+                  "Diagnóstico del estado actual, mercado y competencia. Posicionamiento, propuesta de valor y plan comercial. Qué hacer, qué dejar de hacer, en qué orden, y dónde la IA entrega ventaja.",
               },
               {
                 n: "02",
@@ -94,7 +94,7 @@ export default function Mentoria() {
                 n: "03",
                 title: "IA aplicada",
                 body:
-                  "Contenido, automatización de procesos, agentes y análisis con IA. Aplicada donde mueve la aguja real — velocidad y escala sin perder criterio estratégico.",
+                  "Contenido, automatización de procesos, agentes y análisis con IA. Aplicada donde mueve la aguja real, velocidad y escala sin perder criterio estratégico.",
               },
             ].map((item, i) => (
               <motion.div
@@ -221,7 +221,7 @@ export default function Mentoria() {
               "Un plan comercial priorizado, con foco y criterio ejecutivo.",
               "Equipo interno y proveedores coordinados contra los mismos KPIs.",
               "IA y automatización aplicadas donde dan ventaja real.",
-              "Dashboard con ventas, leads y actividad — decisiones con datos.",
+              "Dashboard con ventas, leads y actividad, decisiones con datos.",
               "Un sistema que no colapsa si faltas una semana.",
             ].map((text, i) => (
               <motion.div
@@ -276,7 +276,7 @@ export default function Mentoria() {
                 step: "03",
                 title: "Diagnóstico y plan (semana 1-2)",
                 desc:
-                  "Audito el estado actual — canales, herramientas, equipo, datos — y entrego un plan de 90 días priorizado por impacto.",
+                  "Audito el estado actual, canales, herramientas, equipo, datos, y entrego un plan de 90 días priorizado por impacto.",
               },
               {
                 step: "04",
@@ -326,7 +326,7 @@ export default function Mentoria() {
               Cuéntame sobre tu empresa. Si la dirección de marketing con
               IA encaja, te propongo cómo entrar.
             </p>
-            <Link href="/postular" className="inline-block w-full sm:w-auto">
+            <Link href="/trabajemos" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-10 text-base rounded-full w-full sm:w-auto"

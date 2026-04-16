@@ -130,10 +130,10 @@ function StructuredData({ data }) {
 import { Fragment, jsx as jsx4, jsxs as jsxs2 } from "react/jsx-runtime";
 var ROUTE_LABELS = {
   "/": "Inicio",
-  "/mentoria": "Mentor\xEDa",
+  "/mentoria": "C\xF3mo trabajo",
   "/sobre-mi": "Sobre m\xED",
-  "/postular": "Postular",
-  "/faq": "Preguntas frecuentes"
+  "/trabajemos": "Trabajemos",
+  "/preguntas": "Preguntas frecuentes"
 };
 function Breadcrumbs() {
   const [location] = useLocation();
@@ -178,7 +178,7 @@ function Layout({ children }) {
     { label: "Inicio", href: "/" },
     { label: "C\xF3mo trabajo", href: "/mentoria" },
     { label: "Sobre m\xED", href: "/sobre-mi" },
-    { label: "FAQ", href: "/faq" }
+    { label: "Preguntas", href: "/preguntas" }
   ];
   useEffect2(() => {
     if (typeof document === "undefined") return;
@@ -214,7 +214,7 @@ function Layout({ children }) {
             {
               href: "/",
               className: "flex items-center hover:opacity-80 transition-opacity -ml-1 px-1 py-2",
-              "aria-label": "Sebasti\xE1n Jara \u2014 Inicio",
+              "aria-label": "Sebasti\xE1n Jara, Inicio",
               children: /* @__PURE__ */ jsx5(
                 "img",
                 {
@@ -238,7 +238,7 @@ function Layout({ children }) {
                 children: item.label
               }
             ) }, item.href)),
-            /* @__PURE__ */ jsx5(Link2, { href: "/postular", children: /* @__PURE__ */ jsx5(
+            /* @__PURE__ */ jsx5(Link2, { href: "/trabajemos", children: /* @__PURE__ */ jsx5(
               Button,
               {
                 size: "sm",
@@ -282,7 +282,7 @@ function Layout({ children }) {
               children: item.label
             }
           ) }) }, item.href)) }) }),
-          /* @__PURE__ */ jsx5("div", { className: "px-6 pb-8 pt-4 border-t border-border/50", children: /* @__PURE__ */ jsx5(Link2, { href: "/postular", className: "block", children: /* @__PURE__ */ jsxs3(
+          /* @__PURE__ */ jsx5("div", { className: "px-6 pb-8 pt-4 border-t border-border/50", children: /* @__PURE__ */ jsx5(Link2, { href: "/trabajemos", className: "block", children: /* @__PURE__ */ jsxs3(
             Button,
             {
               size: "lg",
@@ -570,7 +570,7 @@ function Home2() {
     /* @__PURE__ */ jsx9(
       SEO,
       {
-        title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA aplicada",
+        title: "Sebasti\xE1n Jara, CMO Fraccionado con IA aplicada",
         description: "Direcci\xF3n de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU.",
         keywords: [
           "CMO fraccionado",
@@ -621,7 +621,7 @@ function Home2() {
                 ". Sin contratar un equipo completo. Estrategia, gesti\xF3n y ejecuci\xF3n desde adentro de tu empresa."
               ] }),
               /* @__PURE__ */ jsxs6("div", { className: "flex flex-col sm:flex-row gap-3", children: [
-                /* @__PURE__ */ jsx9(Link3, { href: "/postular", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
+                /* @__PURE__ */ jsx9(Link3, { href: "/trabajemos", className: "w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
                   Button,
                   {
                     size: "lg",
@@ -642,7 +642,7 @@ function Home2() {
                   }
                 ) })
               ] }),
-              /* @__PURE__ */ jsx9("p", { className: "text-xs text-muted-foreground mt-6", children: "Chile \xB7 LATAM \xB7 EE.UU. \u2014 Trabajo con pocos clientes a la vez." })
+              /* @__PURE__ */ jsx9("p", { className: "text-xs text-muted-foreground mt-6", children: "Chile \xB7 LATAM \xB7 EE.UU., Trabajo con pocos clientes a la vez." })
             ]
           }
         ),
@@ -693,7 +693,7 @@ function Home2() {
             "."
           ] }),
           /* @__PURE__ */ jsxs6("div", { className: "grid md:grid-cols-2 gap-8 mt-12", children: [
-            /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: "No soy agencia. No soy freelance. No soy consultor de un workshop. Asumo la direcci\xF3n de tu marketing como parte de tu organizaci\xF3n \u2014 con la experiencia de un CMO senior y la IA como palanca real de ejecuci\xF3n, por una fracci\xF3n del costo de contratar un equipo completo." }),
+            /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: "No soy agencia. No soy freelance. No soy consultor de un workshop. Asumo la direcci\xF3n de tu marketing como parte de tu organizaci\xF3n, con la experiencia de un CMO senior y la IA como palanca real de ejecuci\xF3n, por una fracci\xF3n del costo de contratar un equipo completo." }),
             /* @__PURE__ */ jsx9("p", { className: "text-muted-foreground leading-relaxed", children: "Defino la estrategia, priorizo, coordino equipos y proveedores, implemento automatizaci\xF3n e IA donde aporta, y mido. El foco es uno: que el marketing deje de ser una suma de t\xE1cticas y se convierta en un sistema que escala." })
           ] })
         ]
@@ -760,7 +760,7 @@ function Home2() {
         {
           n: "01",
           title: "Estrategia",
-          body: "Diagn\xF3stico, mercado, posicionamiento y plan. Qu\xE9 hacer, qu\xE9 dejar de hacer, en qu\xE9 orden \u2014 y d\xF3nde la IA aporta ventaja."
+          body: "Diagn\xF3stico, mercado, posicionamiento y plan. Qu\xE9 hacer, qu\xE9 dejar de hacer, en qu\xE9 orden, y d\xF3nde la IA aporta ventaja."
         },
         {
           n: "02",
@@ -770,7 +770,7 @@ function Home2() {
         {
           n: "03",
           title: "IA aplicada",
-          body: "Contenido, automatizaci\xF3n, agentes y an\xE1lisis con IA \u2014 aplicada donde mueve la aguja real, no por moda. Velocidad sin perder criterio."
+          body: "Contenido, automatizaci\xF3n, agentes y an\xE1lisis con IA, aplicada donde mueve la aguja real, no por moda. Velocidad sin perder criterio."
         }
       ].map((item, i) => /* @__PURE__ */ jsxs6(
         motion.div,
@@ -812,7 +812,7 @@ function Home2() {
                 children: "GoPoint Agency"
               }
             ),
-            ". He liderado marketing para empresas en LATAM y Estados Unidos \u2014 SEO, Ads, sistemas comerciales, automatizaci\xF3n y agentes con IA. Trabajo con pocos clientes a la vez para dar profundidad, no volumen."
+            ". He liderado marketing para empresas en LATAM y Estados Unidos, SEO, Ads, sistemas comerciales, automatizaci\xF3n y agentes con IA. Trabajo con pocos clientes a la vez para dar profundidad, no volumen."
           ] }),
           /* @__PURE__ */ jsx9("div", { className: "mt-8", children: /* @__PURE__ */ jsxs6(
             Link3,
@@ -850,7 +850,7 @@ function Home2() {
           children: [
             /* @__PURE__ */ jsx9("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "\xBFNecesitas un CMO con IA?" }),
             /* @__PURE__ */ jsx9("p", { className: "text-base md:text-lg text-muted-foreground mb-10 leading-relaxed", children: "Cu\xE9ntame sobre tu empresa y el momento en que est\xE1s. Reviso si encaja y te respondo personalmente." }),
-            /* @__PURE__ */ jsx9(Link3, { href: "/postular", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
+            /* @__PURE__ */ jsx9(Link3, { href: "/trabajemos", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs6(
               Button,
               {
                 size: "lg",
@@ -883,7 +883,7 @@ function About() {
     /* @__PURE__ */ jsx10(
       SEO,
       {
-        title: "Sobre Sebasti\xE1n Jara \u2014 Consultor de IA & Marketing, CMO Fraccionado",
+        title: "Sobre Sebasti\xE1n Jara, Consultor de IA & Marketing, CMO Fraccionado",
         description: "Founder & CEO de GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads, automatizaci\xF3n e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU.",
         keywords: [
           "Sebasti\xE1n Jara",
@@ -908,7 +908,7 @@ function About() {
             "img",
             {
               src: "/images/sebastian-jara.webp",
-              alt: "Sebasti\xE1n Jara \u2014 CMO Fraccionado y consultor de IA & Marketing",
+              alt: "Sebasti\xE1n Jara, CMO Fraccionado y consultor de IA & Marketing",
               className: "w-full rounded-2xl",
               width: "1068",
               height: "1346",
@@ -928,7 +928,7 @@ function About() {
             /* @__PURE__ */ jsx10("p", { className: "text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-primary mb-5", children: "Consultor de IA & Marketing" }),
             /* @__PURE__ */ jsx10("h1", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8", children: "Sebasti\xE1n Jara" }),
             /* @__PURE__ */ jsxs7("div", { className: "space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed", children: [
-              /* @__PURE__ */ jsx10("p", { children: "Founder & CEO de GoPoint. 15+ a\xF1os liderando marketing digital para empresas en LATAM y Estados Unidos \u2014 SEO, Ads, sistemas comerciales, automatizaci\xF3n y agentes con IA." }),
+              /* @__PURE__ */ jsx10("p", { children: "Founder & CEO de GoPoint. 15+ a\xF1os liderando marketing digital para empresas en LATAM y Estados Unidos, SEO, Ads, sistemas comerciales, automatizaci\xF3n y agentes con IA." }),
               /* @__PURE__ */ jsxs7("p", { children: [
                 "Hoy opero como",
                 " ",
@@ -955,15 +955,15 @@ function About() {
           /* @__PURE__ */ jsxs7("div", { className: "space-y-6", children: [
             /* @__PURE__ */ jsxs7("div", { className: "border-l-2 border-primary/40 pl-6", children: [
               /* @__PURE__ */ jsx10("h3", { className: "font-semibold", children: "GoPoint Agency" }),
-              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Founder & CEO \u2014 Agencia de marketing digital, automatizaci\xF3n e IA aplicada." })
+              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Founder & CEO, Agencia de marketing digital, automatizaci\xF3n e IA aplicada." })
             ] }),
             /* @__PURE__ */ jsxs7("div", { className: "border-l-2 border-border/50 pl-6", children: [
               /* @__PURE__ */ jsx10("h3", { className: "font-semibold", children: "FrutillarHoy" }),
-              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Director \u2014 Portal de contenido local." })
+              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Director, Portal de contenido local." })
             ] }),
             /* @__PURE__ */ jsxs7("div", { className: "border-l-2 border-border/50 pl-6", children: [
               /* @__PURE__ */ jsx10("h3", { className: "font-semibold", children: "MarketingHoy.com" }),
-              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Director \u2014 Medio de marketing digital en espa\xF1ol." })
+              /* @__PURE__ */ jsx10("p", { className: "text-sm text-muted-foreground", children: "Director, Medio de marketing digital en espa\xF1ol." })
             ] })
           ] })
         ]
@@ -1003,7 +1003,7 @@ function About() {
         className: "max-w-2xl mx-auto text-center",
         children: [
           /* @__PURE__ */ jsx10("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8", children: "Si quieres trabajar conmigo, conversemos." }),
-          /* @__PURE__ */ jsx10(Link4, { href: "/postular", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs7(
+          /* @__PURE__ */ jsx10(Link4, { href: "/trabajemos", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs7(
             Button,
             {
               size: "lg",
@@ -1037,7 +1037,7 @@ function Mentoria() {
     /* @__PURE__ */ jsx11(
       SEO,
       {
-        title: "C\xF3mo trabajo \u2014 CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
+        title: "C\xF3mo trabajo, CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
         description: "C\xF3mo opero como CMO fraccionado: direcci\xF3n de marketing senior con IA aplicada, integrado a tu equipo. Estrategia, gesti\xF3n y ejecuci\xF3n desde adentro de tu empresa.",
         keywords: [
           "c\xF3mo trabaja CMO fraccionado",
@@ -1064,7 +1064,7 @@ function Mentoria() {
             /* @__PURE__ */ jsx11("span", { className: "text-primary", children: "CMO fraccionado" }),
             " con IA aplicada."
           ] }),
-          /* @__PURE__ */ jsx11("p", { className: "text-base md:text-lg text-muted-foreground leading-relaxed mb-3", children: "No entrego un informe y me voy. Me sumo al equipo, defino rumbo, priorizo y hago que las cosas salgan \u2014 con la IA como palanca de ejecuci\xF3n donde aporta valor real." }),
+          /* @__PURE__ */ jsx11("p", { className: "text-base md:text-lg text-muted-foreground leading-relaxed mb-3", children: "No entrego un informe y me voy. Me sumo al equipo, defino rumbo, priorizo y hago que las cosas salgan, con la IA como palanca de ejecuci\xF3n donde aporta valor real." }),
           /* @__PURE__ */ jsx11("p", { className: "text-sm text-muted-foreground", children: "Trabajo con pocos clientes a la vez." })
         ]
       }
@@ -1087,7 +1087,7 @@ function Mentoria() {
         {
           n: "01",
           title: "Estrategia",
-          body: "Diagn\xF3stico del estado actual, mercado y competencia. Posicionamiento, propuesta de valor y plan comercial. Qu\xE9 hacer, qu\xE9 dejar de hacer, en qu\xE9 orden \u2014 y d\xF3nde la IA entrega ventaja."
+          body: "Diagn\xF3stico del estado actual, mercado y competencia. Posicionamiento, propuesta de valor y plan comercial. Qu\xE9 hacer, qu\xE9 dejar de hacer, en qu\xE9 orden, y d\xF3nde la IA entrega ventaja."
         },
         {
           n: "02",
@@ -1097,7 +1097,7 @@ function Mentoria() {
         {
           n: "03",
           title: "IA aplicada",
-          body: "Contenido, automatizaci\xF3n de procesos, agentes y an\xE1lisis con IA. Aplicada donde mueve la aguja real \u2014 velocidad y escala sin perder criterio estrat\xE9gico."
+          body: "Contenido, automatizaci\xF3n de procesos, agentes y an\xE1lisis con IA. Aplicada donde mueve la aguja real, velocidad y escala sin perder criterio estrat\xE9gico."
         }
       ].map((item, i) => /* @__PURE__ */ jsxs8(
         motion3.div,
@@ -1201,7 +1201,7 @@ function Mentoria() {
             "Un plan comercial priorizado, con foco y criterio ejecutivo.",
             "Equipo interno y proveedores coordinados contra los mismos KPIs.",
             "IA y automatizaci\xF3n aplicadas donde dan ventaja real.",
-            "Dashboard con ventas, leads y actividad \u2014 decisiones con datos.",
+            "Dashboard con ventas, leads y actividad, decisiones con datos.",
             "Un sistema que no colapsa si faltas una semana."
           ].map((text, i) => /* @__PURE__ */ jsxs8(
             motion3.div,
@@ -1246,7 +1246,7 @@ function Mentoria() {
         {
           step: "03",
           title: "Diagn\xF3stico y plan (semana 1-2)",
-          desc: "Audito el estado actual \u2014 canales, herramientas, equipo, datos \u2014 y entrego un plan de 90 d\xEDas priorizado por impacto."
+          desc: "Audito el estado actual, canales, herramientas, equipo, datos, y entrego un plan de 90 d\xEDas priorizado por impacto."
         },
         {
           step: "04",
@@ -1283,7 +1283,7 @@ function Mentoria() {
           children: [
             /* @__PURE__ */ jsx11("h2", { className: "font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6", children: "\xBFEncaja con tu momento?" }),
             /* @__PURE__ */ jsx11("p", { className: "text-base md:text-lg text-muted-foreground mb-10 leading-relaxed", children: "Cu\xE9ntame sobre tu empresa. Si la direcci\xF3n de marketing con IA encaja, te propongo c\xF3mo entrar." }),
-            /* @__PURE__ */ jsx11(Link5, { href: "/postular", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs8(
+            /* @__PURE__ */ jsx11(Link5, { href: "/trabajemos", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs8(
               Button,
               {
                 size: "lg",
@@ -1371,7 +1371,7 @@ function Postular() {
     /* @__PURE__ */ jsx12(
       SEO,
       {
-        title: "Trabajemos juntos | Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+        title: "Trabajemos juntos | Sebasti\xE1n Jara, CMO Fraccionado",
         description: "Cu\xE9ntame sobre tu empresa. Proceso de postulaci\xF3n breve para evaluar si el rol de CMO fraccionado encaja con tu momento y equipo.",
         keywords: ["CMO fraccionado", "contratar CMO", "fractional CMO", "direcci\xF3n de marketing", "Sebasti\xE1n Jara"]
       }
@@ -1400,8 +1400,8 @@ function Postular() {
         transition: { duration: 0.5 },
         className: "max-w-2xl mx-auto",
         children: submitted ? /* @__PURE__ */ jsxs9("div", { className: "glass-panel rounded-xl p-10 text-center", children: [
-          /* @__PURE__ */ jsx12("h2", { className: "text-2xl font-semibold mb-4", children: "Postulaci\xF3n enviada" }),
-          /* @__PURE__ */ jsx12("p", { className: "text-muted-foreground", children: "Recib\xED tu postulaci\xF3n. Te responder\xE9 a la brevedad." })
+          /* @__PURE__ */ jsx12("h2", { className: "text-2xl font-semibold mb-4", children: "Mensaje enviado" }),
+          /* @__PURE__ */ jsx12("p", { className: "text-muted-foreground", children: "Se abri\xF3 WhatsApp con tu mensaje. Si no lo enviaste, vuelve y reenv\xEDalo, reviso cada caso personalmente." })
         ] }) : /* @__PURE__ */ jsxs9("form", { onSubmit: handleSubmit, className: "space-y-6", children: [
           /* @__PURE__ */ jsxs9("div", { children: [
             /* @__PURE__ */ jsx12("label", { className: "block text-sm font-medium mb-2", children: "Nombre" }),
@@ -1539,7 +1539,7 @@ function Postular() {
               size: "lg",
               className: "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 px-8 text-base rounded-full w-full sm:w-auto",
               children: [
-                "Enviar postulaci\xF3n ",
+                "Hablemos por WhatsApp ",
                 /* @__PURE__ */ jsx12(ArrowRight6, { className: "ml-2 h-4 w-4" })
               ]
             }
@@ -1561,11 +1561,11 @@ var faqs = [
     items: [
       {
         q: "\xBFQu\xE9 es un CMO fraccionado?",
-        a: "Un CMO fraccionado es un director de marketing senior que se integra a tu empresa a tiempo parcial. Toma las decisiones, dirige al equipo y coordina a los proveedores \u2014 igual que un CMO interno \u2014 pero por una fracci\xF3n del costo de contratar uno full-time. Es el formato que uso con mis clientes."
+        a: "Un CMO fraccionado es un director de marketing senior que se integra a tu empresa a tiempo parcial. Toma las decisiones, dirige al equipo y coordina a los proveedores, igual que un CMO interno, pero por una fracci\xF3n del costo de contratar uno full-time. Es el formato que uso con mis clientes."
       },
       {
         q: "\xBFY qu\xE9 es eso de 'consultor de IA & Marketing'?",
-        a: "Es c\xF3mo me describo profesionalmente: opero como CMO fraccionado y mi diferencial es aplicar IA al marketing donde entrega ventaja real \u2014 automatizaci\xF3n, agentes, contenido, an\xE1lisis. No uso IA por moda; la uso cuando mueve la aguja."
+        a: "Es c\xF3mo me describo profesionalmente: opero como CMO fraccionado y mi diferencial es aplicar IA al marketing donde entrega ventaja real, automatizaci\xF3n, agentes, contenido, an\xE1lisis. No uso IA por moda; la uso cuando mueve la aguja."
       },
       {
         q: "\xBFEn qu\xE9 se diferencia de una agencia?",
@@ -1573,11 +1573,11 @@ var faqs = [
       },
       {
         q: "\xBFEn qu\xE9 se diferencia de un consultor tradicional?",
-        a: "Un consultor entrega un informe y se va. Yo me sumo a la operaci\xF3n diaria \u2014 decido, dirijo, mido y ajusto semana a semana. Me hago cargo del resultado, no solo del diagn\xF3stico."
+        a: "Un consultor entrega un informe y se va. Yo me sumo a la operaci\xF3n diaria, decido, dirijo, mido y ajusto semana a semana. Me hago cargo del resultado, no solo del diagn\xF3stico."
       },
       {
         q: "\xBFC\xF3mo usas la IA en marketing?",
-        a: "Donde tiene impacto real: automatizaci\xF3n de workflows, generaci\xF3n y curadur\xEDa de contenido, agentes para atenci\xF3n y cotizaci\xF3n, an\xE1lisis y segmentaci\xF3n, personalizaci\xF3n de campa\xF1as. Nunca como sustituto del criterio estrat\xE9gico \u2014 como multiplicador de velocidad y escala."
+        a: "Donde tiene impacto real: automatizaci\xF3n de workflows, generaci\xF3n y curadur\xEDa de contenido, agentes para atenci\xF3n y cotizaci\xF3n, an\xE1lisis y segmentaci\xF3n, personalizaci\xF3n de campa\xF1as. Nunca como sustituto del criterio estrat\xE9gico, como multiplicador de velocidad y escala."
       }
     ]
   },
@@ -1586,7 +1586,7 @@ var faqs = [
     items: [
       {
         q: "\xBFPara qui\xE9n es este servicio?",
-        a: "Para due\xF1os, CEOs o socios de empresas que ya facturan y necesitan direcci\xF3n de marketing senior \u2014 pero todav\xEDa no justifican contratar un CMO full-time, o prefieren ganar velocidad trayendo a alguien con experiencia y criterio de IA desde adentro."
+        a: "Para due\xF1os, CEOs o socios de empresas que ya facturan y necesitan direcci\xF3n de marketing senior, pero todav\xEDa no justifican contratar un CMO full-time, o prefieren ganar velocidad trayendo a alguien con experiencia y criterio de IA desde adentro."
       },
       {
         q: "\xBFPara qui\xE9n NO es?",
@@ -1623,7 +1623,7 @@ var faqs = [
       },
       {
         q: "\xBFC\xF3mo postulo?",
-        a: "Completa el formulario en sebastianjara.com/postular con tu nombre, empresa, rol, facturaci\xF3n mensual aproximada, principal desaf\xEDo y objetivo en 90 d\xEDas."
+        a: "Completa el formulario en sebastianjara.com/trabajemos con tu nombre, empresa, rol, facturaci\xF3n mensual aproximada, principal desaf\xEDo y objetivo en 90 d\xEDas."
       }
     ]
   },
@@ -1668,7 +1668,7 @@ function FAQ() {
     /* @__PURE__ */ jsx13(
       SEO,
       {
-        title: "Preguntas frecuentes | Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA",
+        title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
         description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada de Sebasti\xE1n Jara: qu\xE9 es, para qui\xE9n, c\xF3mo trabaja y c\xF3mo postular.",
         keywords: [
           "preguntas frecuentes CMO fraccionado",
@@ -1677,7 +1677,7 @@ function FAQ() {
           "CMO fraccionado Chile",
           "consultor\xEDa marketing LATAM"
         ],
-        canonical: "https://sebastianjara.com/faq"
+        canonical: "https://sebastianjara.com/preguntas"
       }
     ),
     /* @__PURE__ */ jsx13(StructuredData, { data: FAQ_SCHEMA }),
@@ -1734,7 +1734,7 @@ function FAQ() {
         children: [
           /* @__PURE__ */ jsx13("h2", { className: "font-display text-2xl md:text-4xl leading-tight mb-4", children: "\xBFTienes m\xE1s preguntas?" }),
           /* @__PURE__ */ jsx13("p", { className: "text-muted-foreground mb-8", children: "Postula y me cuentas tu caso directamente." }),
-          /* @__PURE__ */ jsx13(Link6, { href: "/postular", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs10(
+          /* @__PURE__ */ jsx13(Link6, { href: "/trabajemos", className: "inline-block w-full sm:w-auto", children: /* @__PURE__ */ jsxs10(
             Button,
             {
               size: "lg",
@@ -1771,9 +1771,9 @@ function Router() {
       /* @__PURE__ */ jsx14(Route, { path: "/", component: Home2 }),
       /* @__PURE__ */ jsx14(Route, { path: "/mentoria", component: Mentoria }),
       /* @__PURE__ */ jsx14(Route, { path: "/sobre-mi", component: About }),
-      /* @__PURE__ */ jsx14(Route, { path: "/postular", component: Postular }),
-      /* @__PURE__ */ jsx14(Route, { path: "/faq", component: FAQ }),
-      /* @__PURE__ */ jsx14(Route, { path: "/aplicar", children: () => /* @__PURE__ */ jsx14(Redirect, { to: "/postular" }) }),
+      /* @__PURE__ */ jsx14(Route, { path: "/trabajemos", component: Postular }),
+      /* @__PURE__ */ jsx14(Route, { path: "/preguntas", component: FAQ }),
+      /* @__PURE__ */ jsx14(Route, { path: "/aplicar", children: () => /* @__PURE__ */ jsx14(Redirect, { to: "/trabajemos" }) }),
       /* @__PURE__ */ jsx14(Route, { path: "/metodo", children: () => /* @__PURE__ */ jsx14(Redirect, { to: "/mentoria" }) }),
       /* @__PURE__ */ jsx14(Route, { path: "/con-quien-trabajo", children: () => /* @__PURE__ */ jsx14(Redirect, { to: "/" }) }),
       /* @__PURE__ */ jsx14(Route, { path: "/404", component: NotFound }),
@@ -1797,30 +1797,30 @@ import path from "path";
 var BASE_URL = "https://sebastianjara.com";
 var routeMeta = {
   "/": {
-    title: "Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA aplicada",
+    title: "Sebasti\xE1n Jara, CMO Fraccionado con IA aplicada",
     description: "Direcci\xF3n de marketing senior con IA aplicada, sin contratar un equipo completo. CMO fraccionado para empresas en Chile, LATAM y EE.UU.",
     canonical: `${BASE_URL}/`
   },
   "/mentoria": {
-    title: "C\xF3mo trabajo \u2014 CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
+    title: "C\xF3mo trabajo, CMO Fraccionado con IA aplicada | Sebasti\xE1n Jara",
     description: "C\xF3mo opero como CMO fraccionado: estrategia, gesti\xF3n e IA aplicada. Me integro a tu empresa como direcci\xF3n de marketing senior, sin contratar un equipo completo.",
     canonical: `${BASE_URL}/mentoria`
   },
   "/sobre-mi": {
-    title: "Sobre Sebasti\xE1n Jara \u2014 Consultor de IA & Marketing, CMO Fraccionado",
+    title: "Sobre Sebasti\xE1n Jara, Consultor de IA & Marketing, CMO Fraccionado",
     description: "Founder & CEO de GoPoint. 15+ a\xF1os en marketing digital, SEO, Ads, automatizaci\xF3n e IA aplicada. CMO fraccionado para empresas en LATAM y EE.UU.",
     canonical: `${BASE_URL}/sobre-mi`,
     ogType: "profile"
   },
-  "/postular": {
-    title: "Trabajemos juntos | Sebasti\xE1n Jara \u2014 CMO Fraccionado",
+  "/trabajemos": {
+    title: "Trabajemos juntos | Sebasti\xE1n Jara, CMO Fraccionado",
     description: "Cu\xE9ntame sobre tu empresa. Proceso breve para evaluar si el rol de CMO fraccionado con IA aplicada encaja con tu momento y equipo.",
-    canonical: `${BASE_URL}/postular`
+    canonical: `${BASE_URL}/trabajemos`
   },
-  "/faq": {
-    title: "Preguntas frecuentes | Sebasti\xE1n Jara \u2014 CMO Fraccionado con IA",
+  "/preguntas": {
+    title: "Preguntas frecuentes | Sebasti\xE1n Jara, CMO Fraccionado con IA",
     description: "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qu\xE9 es, para qui\xE9n, c\xF3mo trabajo y c\xF3mo postular.",
-    canonical: `${BASE_URL}/faq`
+    canonical: `${BASE_URL}/preguntas`
   }
 };
 function injectSeoMeta(html, url) {
@@ -1874,7 +1874,7 @@ function injectSeoMeta(html, url) {
 
 // scripts/prerender.tsx
 import { jsx as jsx15 } from "react/jsx-runtime";
-var routes = ["/", "/mentoria", "/sobre-mi", "/postular", "/faq"];
+var routes = ["/", "/mentoria", "/sobre-mi", "/trabajemos", "/preguntas"];
 var distPath = path.resolve("dist/public");
 var outDir = path.resolve(distPath, "_prerendered");
 var template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
@@ -1895,7 +1895,7 @@ for (const route of routes) {
     success++;
     console.log(`  \u2713 ${route} \u2192 _prerendered/${routeName}.html`);
   } catch (e) {
-    console.warn(`  \u2717 ${route} \u2014 ${e.message}`);
+    console.warn(`  \u2717 ${route}, ${e.message}`);
   }
 }
 console.log(`
