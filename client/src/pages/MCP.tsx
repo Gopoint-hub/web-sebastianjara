@@ -103,87 +103,96 @@ const faqs = [
 ];
 
 const pageUrl = "https://sebastianjara.com/mcp";
+const publishedIso = "2026-04-23T10:00:00-04:00";
+const modifiedIso = "2026-04-23T10:00:00-04:00";
+const pageImage = "https://sebastianjara.com/images/profile.webp";
 
-const jsonLd = {
+const articleSchema = {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "TechArticle",
+  "@id": `${pageUrl}#article`,
+  headline: "Qué es un MCP y cómo conectar Claude o ChatGPT a tu negocio",
+  description:
+    "Guía clara sobre qué es un MCP (Model Context Protocol), cómo conectarlo a Claude o ChatGPT, y qué puede hacer por tu empresa.",
+  datePublished: publishedIso,
+  dateModified: modifiedIso,
+  inLanguage: "es",
+  image: pageImage,
+  author: {
+    "@type": "Person",
+    name: "Sebastián Jara",
+    url: "https://sebastianjara.com/sobre-mi",
+    jobTitle: "CMO Fraccionado con IA aplicada",
+    sameAs: [
+      "https://www.linkedin.com/in/sebastianjarabravo/",
+      "https://www.youtube.com/@sebastianjaracom",
+      "https://www.tiktok.com/@sebastianjara.com",
+    ],
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Sebastián Jara",
+    url: "https://sebastianjara.com/",
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+  about: {
+    "@type": "Thing",
+    name: "Model Context Protocol",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${pageUrl}#faq`,
+  name: "Preguntas frecuentes sobre MCP",
+  inLanguage: "es",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.answer,
+    },
+  })),
+};
+
+const howtoSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": `${pageUrl}#howto`,
+  name: "Cómo implementar un MCP en tu empresa",
+  description:
+    "Proceso para integrar MCPs a Claude o ChatGPT y conectar la IA con tus sistemas de negocio.",
+  inLanguage: "es",
+  step: implementSteps.map((s, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: s.title,
+    text: s.desc,
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${pageUrl}#breadcrumbs`,
+  name: "Breadcrumbs MCP",
+  itemListElement: [
     {
-      "@type": "TechArticle",
-      "@id": `${pageUrl}#article`,
-      headline:
-        "Qué es un MCP y cómo conectar Claude o ChatGPT a tu negocio",
-      description:
-        "Guía clara sobre qué es un MCP (Model Context Protocol), cómo conectarlo a Claude o ChatGPT, y qué puede hacer por tu empresa.",
-      datePublished: "2026-04-23",
-      dateModified: "2026-04-23",
-      inLanguage: "es",
-      author: {
-        "@type": "Person",
-        name: "Sebastián Jara",
-        url: "https://sebastianjara.com/sobre-mi",
-        jobTitle: "CMO Fraccionado con IA aplicada",
-        sameAs: [
-          "https://www.linkedin.com/in/sebastianjarabravo/",
-          "https://www.youtube.com/@sebastianjaracom",
-          "https://www.tiktok.com/@sebastianjara.com",
-        ],
-      },
-      publisher: {
-        "@type": "Person",
-        name: "Sebastián Jara",
-        url: "https://sebastianjara.com/",
-      },
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": pageUrl,
-      },
-      about: {
-        "@type": "Thing",
-        name: "Model Context Protocol",
-      },
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://sebastianjara.com/",
     },
     {
-      "@type": "FAQPage",
-      "@id": `${pageUrl}#faq`,
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question",
-        name: f.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: f.answer,
-        },
-      })),
-    },
-    {
-      "@type": "HowTo",
-      "@id": `${pageUrl}#howto`,
-      name: "Cómo implementar un MCP en tu empresa",
-      description:
-        "Proceso para integrar MCPs a Claude o ChatGPT y conectar la IA con tus sistemas de negocio.",
-      step: implementSteps.map((s, i) => ({
-        "@type": "HowToStep",
-        position: i + 1,
-        name: s.title,
-        text: s.desc,
-      })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${pageUrl}#breadcrumbs`,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Inicio",
-          item: "https://sebastianjara.com/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "MCP",
-          item: pageUrl,
-        },
-      ],
+      "@type": "ListItem",
+      position: 2,
+      name: "MCP",
+      item: pageUrl,
     },
   ],
 };
@@ -208,10 +217,22 @@ export default function MCP() {
         type="article"
       />
 
-      {/* JSON-LD structured data */}
+      {/* JSON-LD structured data, one script per schema for validator clarity */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero */}
