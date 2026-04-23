@@ -92,6 +92,14 @@ const routeMeta: Record<string, RouteMeta> = {
       "Respuestas sobre el servicio de CMO fraccionado con IA aplicada: qué es, para quién, cómo trabajo y cómo contactarme.",
     canonical: `${BASE_URL}/preguntas`,
   },
+  "/mcp": {
+    title:
+      "Qué es un MCP y cómo conectar Claude o ChatGPT a tu negocio | Sebastián Jara",
+    description:
+      "Guía clara sobre qué es un MCP (Model Context Protocol), cómo conectarlo a Claude o ChatGPT, y qué puede hacer por tu empresa. Ejemplos, casos de uso y cómo implementarlo.",
+    canonical: `${BASE_URL}/mcp`,
+    ogType: "article",
+  },
 };
 
 /**
