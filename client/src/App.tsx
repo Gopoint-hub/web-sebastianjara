@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Mentoria from "./pages/Mentoria";
 import Postular from "./pages/Postular";
 import FAQ from "./pages/FAQ";
+import MCP from "./pages/MCP";
 import ScrollToTop from "./components/ScrollToTop";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
         <Route path={"/sobre-mi"} component={About} />
         <Route path={"/trabajemos"} component={Postular} />
         <Route path={"/preguntas"} component={FAQ} />
+        <Route path={"/mcp"} component={MCP} />
         {/* Redirects from old routes */}
         <Route path={"/aplicar"}>{() => <Redirect to="/trabajemos" />}</Route>
         <Route path={"/metodo"}>{() => <Redirect to="/mentoria" />}</Route>
