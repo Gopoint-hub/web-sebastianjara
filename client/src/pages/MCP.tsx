@@ -26,6 +26,168 @@ const itemFade = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
+const implementSteps = [
+  {
+    step: "01",
+    title: "Mapeo de procesos",
+    desc:
+      "Identificamos qué tareas repetitivas consumen tiempo en tu operación y cuáles de verdad ganan con automatización. No todo se justifica conectar.",
+  },
+  {
+    step: "02",
+    title: "Selección de herramientas",
+    desc:
+      "Revisamos tu stack actual, CRM, calendario, analytics, bases de datos, y definimos qué MCPs estándar usamos y qué partes requieren uno a medida.",
+  },
+  {
+    step: "03",
+    title: "Configuración y permisos",
+    desc:
+      "Instalamos los MCPs en tu cuenta de Claude o ChatGPT con los permisos justos. Nada más, nada menos. Seguridad por defecto.",
+  },
+  {
+    step: "04",
+    title: "Prompts y reglas de negocio",
+    desc:
+      "Documentamos cómo debe comportarse la IA, qué decisiones puede tomar sola, qué debe confirmar y cómo reportar lo que ejecuta.",
+  },
+  {
+    step: "05",
+    title: "Prueba, ajuste y adopción",
+    desc:
+      "Operamos en paralelo unas semanas, medimos tiempos, errores y calidad, y ajustamos hasta que el equipo confía y delega de verdad.",
+  },
+];
+
+const faqs = [
+  {
+    question: "¿Qué es un MCP en palabras simples?",
+    answer:
+      "Un MCP (Model Context Protocol) es un estándar abierto que conecta tu cuenta de Claude o ChatGPT con tus herramientas de trabajo, como calendario, correo, CRM o base de datos. En vez de copiar y pegar información, la IA accede directamente a tus sistemas con permisos controlados y puede leer, escribir y ejecutar tareas por ti.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre un MCP y un chatbot?",
+    answer:
+      "Un chatbot responde dentro de una conversación aislada, sin acceso a tus datos reales. Un MCP convierte al modelo en un operador con contexto real de tu empresa, puede consultar información actualizada, cruzar datos de múltiples sistemas y ejecutar acciones concretas como actualizar un registro en el CRM o agendar una reunión.",
+  },
+  {
+    question: "¿Qué diferencia hay entre conectar un MCP a Claude o a ChatGPT?",
+    answer:
+      "El protocolo es el mismo y fue propuesto originalmente por Anthropic, por lo que Claude tiene soporte nativo más maduro. ChatGPT también admite MCPs a través de sus conectores. En la práctica, para la mayoría de flujos de negocio las capacidades son equivalentes. La elección suele depender del plan que ya tienes, la integración con tu equipo y tu preferencia de modelo.",
+  },
+  {
+    question: "¿Es seguro conectar mis herramientas empresariales vía MCP?",
+    answer:
+      "Sí, cuando se implementa con permisos granulares. Cada MCP define qué puede leer, qué puede escribir y qué puede ejecutar. Puedes revocar acceso en un clic, auditar cada acción y mantener los servidores dentro de tu propia infraestructura si la información es crítica. Un MCP bien configurado es más seguro que humanos copiando datos manualmente entre sistemas.",
+  },
+  {
+    question: "¿Cuánto tiempo toma implementar un MCP en una empresa?",
+    answer:
+      "Para un primer caso de uso acotado, como conectar calendario y correo, hablamos de una a dos semanas. Para un ecosistema completo con CRM, analytics y herramientas a medida, entre cuatro y ocho semanas. El tiempo real depende del estado de tu stack actual y del volumen de procesos que quieras automatizar.",
+  },
+  {
+    question: "¿Necesito un equipo técnico para implementar MCPs?",
+    answer:
+      "No necesariamente para instalar los MCPs estándar que ya existen, como los de Google Calendar, Gmail, Notion o Slack, esos se conectan en minutos desde la interfaz. Para MCPs a medida que se conectan a tu propio sistema sí se requiere desarrollo, pero lo importante no es lo técnico, es definir qué procesos de negocio vale la pena automatizar.",
+  },
+  {
+    question: "¿Qué tipo de empresas se benefician más de un MCP?",
+    answer:
+      "Empresas con procesos repetitivos, datos dispersos en varias herramientas y equipos que pasan horas moviendo información de un lado a otro. PYMES, agencias, estudios profesionales, ecommerce y cualquier negocio donde la operación depende de cruzar datos entre sistemas son los casos con mayor retorno.",
+  },
+  {
+    question: "¿Puedo usar un MCP en Chile o Latinoamérica?",
+    answer:
+      "Sí, los MCPs funcionan igual en cualquier país porque dependen de tu cuenta de Claude o ChatGPT y de las herramientas que ya usas. La implementación y el acompañamiento los hago de forma remota para empresas en Chile, Latinoamérica, España y Estados Unidos.",
+  },
+];
+
+const pageUrl = "https://sebastianjara.com/mcp";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": `${pageUrl}#article`,
+      headline:
+        "Qué es un MCP y cómo conectar Claude o ChatGPT a tu negocio",
+      description:
+        "Guía clara sobre qué es un MCP (Model Context Protocol), cómo conectarlo a Claude o ChatGPT, y qué puede hacer por tu empresa.",
+      datePublished: "2026-04-23",
+      dateModified: "2026-04-23",
+      inLanguage: "es",
+      author: {
+        "@type": "Person",
+        name: "Sebastián Jara",
+        url: "https://sebastianjara.com/sobre-mi",
+        jobTitle: "CMO Fraccionado con IA aplicada",
+        sameAs: [
+          "https://www.linkedin.com/in/sebastianjarabravo/",
+          "https://www.youtube.com/@sebastianjaracom",
+          "https://www.tiktok.com/@sebastianjara.com",
+        ],
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Sebastián Jara",
+        url: "https://sebastianjara.com/",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      about: {
+        "@type": "Thing",
+        name: "Model Context Protocol",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answer,
+        },
+      })),
+    },
+    {
+      "@type": "HowTo",
+      "@id": `${pageUrl}#howto`,
+      name: "Cómo implementar un MCP en tu empresa",
+      description:
+        "Proceso para integrar MCPs a Claude o ChatGPT y conectar la IA con tus sistemas de negocio.",
+      step: implementSteps.map((s, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: s.title,
+        text: s.desc,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumbs`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Inicio",
+          item: "https://sebastianjara.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "MCP",
+          item: pageUrl,
+        },
+      ],
+    },
+  ],
+};
+
 export default function MCP() {
   return (
     <Layout>
@@ -43,6 +205,13 @@ export default function MCP() {
           "automatización con IA",
           "Sebastián Jara",
         ]}
+        type="article"
+      />
+
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero */}
@@ -92,7 +261,8 @@ export default function MCP() {
             </h2>
             <div className="space-y-5 text-base md:text-lg text-foreground/90 leading-relaxed">
               <p>
-                MCP significa Model Context Protocol. Es un estándar abierto que
+                <strong>MCP significa Model Context Protocol.</strong> Es un
+                estándar abierto, propuesto originalmente por Anthropic, que
                 permite a modelos como Claude o ChatGPT conectarse, de forma
                 segura, a tus aplicaciones de trabajo.
               </p>
@@ -486,38 +656,7 @@ export default function MCP() {
           </motion.div>
 
           <div className="space-y-10">
-            {[
-              {
-                step: "01",
-                title: "Mapeo de procesos",
-                desc:
-                  "Identificamos qué tareas repetitivas consumen tiempo en tu operación y cuáles de verdad ganan con automatización. No todo se justifica conectar.",
-              },
-              {
-                step: "02",
-                title: "Selección de herramientas",
-                desc:
-                  "Revisamos tu stack actual, CRM, calendario, analytics, bases de datos, y definimos qué MCPs estándar usamos y qué partes requieren uno a medida.",
-              },
-              {
-                step: "03",
-                title: "Configuración y permisos",
-                desc:
-                  "Instalamos los MCPs en tu cuenta de Claude o ChatGPT con los permisos justos. Nada más, nada menos. Seguridad por defecto.",
-              },
-              {
-                step: "04",
-                title: "Prompts y reglas de negocio",
-                desc:
-                  "Documentamos cómo debe comportarse la IA, qué decisiones puede tomar sola, qué debe confirmar y cómo reportar lo que ejecuta.",
-              },
-              {
-                step: "05",
-                title: "Prueba, ajuste y adopción",
-                desc:
-                  "Operamos en paralelo unas semanas, medimos tiempos, errores y calidad, y ajustamos hasta que el equipo confía y delega de verdad.",
-              },
-            ].map((item) => (
+            {implementSteps.map((item) => (
               <div key={item.step} className="flex items-start gap-6">
                 <span className="font-display text-3xl md:text-4xl text-primary/40 flex-shrink-0 leading-none">
                   {item.step}
@@ -529,6 +668,45 @@ export default function MCP() {
                   </p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-14 md:py-20 border-t border-border/30">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-4">
+              Preguntas frecuentes
+            </p>
+            <h2 className="font-display text-2xl md:text-4xl leading-tight mb-10">
+              Lo que todos preguntan sobre MCPs.
+            </h2>
+          </motion.div>
+
+          <div className="space-y-8">
+            {faqs.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                className="border-b border-border/30 pb-6 last:border-b-0"
+              >
+                <h3 className="font-semibold text-lg md:text-xl mb-3">
+                  {item.question}
+                </h3>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  {item.answer}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
