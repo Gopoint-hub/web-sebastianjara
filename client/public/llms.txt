@@ -46,6 +46,10 @@ Dirección de marketing senior integrada a tu empresa a tiempo parcial. Sebasti�
 
 Los cupos son limitados: Sebastián trabaja con pocos clientes a la vez.
 
+## Recursos educativos
+
+- [Qué es un MCP y cómo conectar Claude o ChatGPT a tu negocio](https://sebastianjara.com/mcp): Guía sobre Model Context Protocol (MCP), cómo conectarlo a Claude o ChatGPT, casos de uso, seguridad y proceso de implementación para empresas.
+
 ## Proyectos y experiencia
 
 - **GoPoint Agency** (Founder & CEO), Agencia de marketing digital, automatización e IA aplicada
@@ -55,7 +59,8 @@ Los cupos son limitados: Sebastián trabaja con pocos clientes a la vez.
 ## Áreas de expertise
 
 - Estrategia de marketing y posicionamiento
-- SEO, Ads y adquisición de tráfico
+- SEO, AEO, GEO y adquisición de tráfico
+- Model Context Protocol (MCP) y agentes con acceso a herramientas
 - Automatización de procesos con IA
 - Agentes y asistentes con LLMs
 - CRM, pipeline y gestión comercial
@@ -91,6 +96,9 @@ Una agencia ejecuta tácticas. El CMO fraccionado decide qué hacer, dirige y co
 
 **¿Cómo aplica la IA en marketing?**
 Como palanca de ejecución: automatización de workflows, agentes, generación de contenido, análisis y personalización. Multiplicador de velocidad y escala, no sustituto del criterio estratégico.
+
+**¿Qué es un MCP (Model Context Protocol)?**
+Un estándar abierto propuesto por Anthropic que conecta modelos como Claude o ChatGPT con herramientas de trabajo reales (calendario, correo, CRM, base de datos, analytics). Permite que la IA lea, escriba y ejecute acciones en los sistemas del negocio con permisos controlados, convirtiendo al modelo en un operador con contexto real de la empresa. Más detalles en https://sebastianjara.com/mcp
 
 **¿Dónde opera?**
 Remotamente con empresas en Chile, Perú, Colombia, México y Estados Unidos.
