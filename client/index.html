@@ -40,6 +40,7 @@
         {
           "@context": "https://schema.org",
           "@type": "Person",
+          "@id": "https://sebastianjara.com/#person",
           "name": "Sebastián Jara",
           "url": "https://sebastianjara.com",
           "image": "https://sebastianjara.com/images/profile.webp",
@@ -60,7 +61,8 @@
             "Marketing Digital",
             "Estrategia de Marketing",
             "SEO",
-            "Ads"
+            "Ads",
+            "Model Context Protocol"
           ],
           "knowsLanguage": ["es", "en"],
           "sameAs": [
@@ -73,29 +75,28 @@
         {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
+          "@id": "https://sebastianjara.com/#service",
           "name": "Sebastián Jara, CMO Fraccionado con IA aplicada",
-          "description": "Servicio de CMO fraccionado con IA aplicada: dirección de marketing senior integrada a tu empresa, sin contratar un equipo completo. Estrategia, gestión, automatización y agentes con IA para empresas en LATAM y EE.UU.",
+          "description": "Servicio 100% remoto de CMO fraccionado con IA aplicada: dirección de marketing senior integrada a tu empresa, sin contratar un equipo completo. Estrategia, gestión, automatización y agentes con IA para empresas en LATAM y EE.UU.",
           "image": "https://sebastianjara.com/images/profile.webp",
           "url": "https://sebastianjara.com",
-          "email": "sebastian@gopointagency.com",
+          "serviceType": "Remote Fractional CMO",
           "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "CL",
-            "addressRegion": "Región Metropolitana",
-            "addressLocality": "Santiago"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": -33.4489,
-            "longitude": -70.6693
+          "provider": { "@id": "https://sebastianjara.com/#person" },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "sebastian@gopointagency.com",
+            "availableLanguage": ["es", "en"],
+            "areaServed": ["CL", "PE", "CO", "MX", "US", "ES"]
           },
           "areaServed": [
             { "@type": "Country", "name": "Chile" },
             { "@type": "Country", "name": "Peru" },
             { "@type": "Country", "name": "Colombia" },
             { "@type": "Country", "name": "Mexico" },
-            { "@type": "Country", "name": "United States" }
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "Spain" }
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -106,7 +107,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "CMO Fraccionado con IA aplicada",
-                  "description": "Dirección de marketing senior integrada a tu empresa: estrategia, gestión de equipos y proveedores, ejecución con IA aplicada y automatización. Formato part-time, sin contratar un CMO full-time."
+                  "description": "Dirección de marketing senior integrada a tu empresa: estrategia, gestión de equipos y proveedores, ejecución con IA aplicada y automatización. Formato part-time, 100% remoto, sin contratar un CMO full-time."
                 }
               },
               {
@@ -115,6 +116,14 @@
                   "@type": "Service",
                   "name": "Consultoría de IA & Marketing",
                   "description": "Diagnóstico e implementación de IA aplicada al marketing: automatización de procesos, agentes, contenido, análisis y adquisición con IA como palanca."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Implementación de MCP (Model Context Protocol)",
+                  "description": "Conexión de Claude o ChatGPT con sistemas de negocio (CRM, calendario, correo, analytics) vía MCP, con permisos y reglas de uso definidas."
                 }
               }
             ]
@@ -129,15 +138,12 @@
         {
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": "https://gopointagency.com/#organization",
           "name": "GoPoint Agency",
           "url": "https://gopointagency.com",
           "logo": "https://sebastianjara.com/images/logo-dark.png",
           "description": "Agencia de marketing digital, automatización e IA aplicada. Sistemas de crecimiento para empresas en LATAM y EE.UU.",
-          "founder": {
-            "@type": "Person",
-            "name": "Sebastián Jara",
-            "url": "https://sebastianjara.com"
-          },
+          "founder": { "@id": "https://sebastianjara.com/#person" },
           "sameAs": [
             "https://gopointagency.com",
             "https://www.linkedin.com/in/sebastianjarabravo/",
@@ -148,14 +154,19 @@
         {
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://sebastianjara.com/#website",
           "name": "Sebastián Jara",
           "url": "https://sebastianjara.com",
           "inLanguage": "es",
-          "description": "Sebastián Jara, CMO Fraccionado y Consultor de IA & Marketing para empresas en LATAM y EE.UU."
+          "description": "Sebastián Jara, CMO Fraccionado y Consultor de IA & Marketing para empresas en LATAM y EE.UU.",
+          "publisher": { "@id": "https://sebastianjara.com/#person" }
         },
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "@id": "https://sebastianjara.com/#faq-cmo",
+          "name": "Preguntas frecuentes sobre CMO fraccionado con IA aplicada",
+          "inLanguage": "es",
           "mainEntity": [
             {
               "@type": "Question",
@@ -210,7 +221,7 @@
               "name": "¿Con qué países trabaja Sebastián Jara?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sebastián Jara trabaja remotamente con empresas en Chile, Perú, Colombia, México y Estados Unidos."
+                "text": "Sebastián Jara trabaja de forma 100% remota con empresas en Chile, Perú, Colombia, México, España y Estados Unidos."
               }
             },
             {
@@ -226,8 +237,11 @@
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "@id": "https://sebastianjara.com/#webpage",
           "url": "https://sebastianjara.com",
           "name": "Sebastián Jara, CMO Fraccionado con IA aplicada",
+          "isPartOf": { "@id": "https://sebastianjara.com/#website" },
+          "about": { "@id": "https://sebastianjara.com/#person" },
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", "h2", ".speakable"]
