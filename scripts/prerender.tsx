@@ -5,7 +5,14 @@ import fs from "fs";
 import path from "path";
 import { injectSeoMeta } from "../server/_core/seo";
 
-const routes = ["/", "/mentoria", "/sobre-mi", "/trabajemos", "/preguntas"];
+const routes = [
+  "/",
+  "/mentoria",
+  "/sobre-mi",
+  "/trabajemos",
+  "/preguntas",
+  "/mcp",
+];
 
 const distPath = path.resolve("dist/public");
 const outDir = path.resolve(distPath, "_prerendered");
